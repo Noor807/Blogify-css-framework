@@ -1,1 +1,157 @@
-@import url(_reset.css);
+/* @import url(_reset.css); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color:white;
+    margin: 0;
+}
+
+h1, h2, h3, a {
+    font-family: 'Merriweather', serif;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.navbar .logo{
+    max-width:200px;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+button {
+    background-color: #e74c3c; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c0392b; 
+}
+
+/*--------------------login form-----------------*/
+
+
+.login-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
+}
+
+.register-here {
+    width: 100%;
+    margin-top: 3rem;
+    color: rgb(10, 10, 10);
+    border-bottom: 1px solid rgb(94, 93, 93);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(30px, 1vw + 1rem, 36px);
+}
+.form-container {
+    height: 800px;
+    width: 100%;
+    max-width: 1000px;
+    background-color:rgb(182, 177, 177);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    font-family: "Inter", sans-serif;
+}
+#login-form {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: orange;
+    outline: none;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: orange;
+    border: none;
+    color: black;
+    font-size: 16px;
+    margin-top: 3.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
