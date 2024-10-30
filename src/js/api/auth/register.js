@@ -30,7 +30,7 @@
 
 import { API_AUTH_REGISTER } from "../constants";
 
-export async function onRegister({ name, email, password }) {
+export async function register({ name, email, password }) {
   try {
     const response = await fetch(API_AUTH_REGISTER, {
       method: "POST",

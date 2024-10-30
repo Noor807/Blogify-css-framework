@@ -6,7 +6,7 @@
 
 import {register } from "../../api/auth/register";
 
-export async function handleRegistration(event) {
+export async function onRegister(event) {
   event.preventDefault();
   const name = event.target.name.value; 
   const email = event.target.email.value; 
