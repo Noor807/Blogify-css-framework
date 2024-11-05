@@ -18,14 +18,18 @@
     <h1 class="create-heading">Create Blog Post:</h1>
 
     <div class="create-blog">
-      <form id="create-blog-form">
+      <form id="create-blog-form" name="createPost">
         <input type="hidden" id="blogId" name="blogId" />
 
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" placeholder="Enter a title here..." required />
 
-        <label for="text-area">Body:</label>
-        <textarea id="text-area" name="text-area" placeholder="Editor body goes here..."></textarea>
+        <label for="body">Body:</label>
+        <textarea id="body" name="body" placeholder="Editor body goes here..." maxlength="280"></textarea>
+
+        <label for="tags">tags</label>
+        <input type="text" id="tags" name="tags">
+
 
         <label for="mediaUrl">Media URL:</label>
 

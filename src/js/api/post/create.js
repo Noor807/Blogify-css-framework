@@ -11,17 +11,19 @@
  * @returns {Promise<Object>} The created post data from the API.
  * @throws {Error} If the API request fails.
  */
-// export async function createPost({ title, body, tags, media }) {}
 
+
+import { API_SOCIAL_POSTS } from "../constants";
 export async function createBlogPost( { title, body, tags, media }) {
     const blogPost = {
       title,
       body,
-      tags: Array.isArray(tags) ? tags : [], // Ensure tags is an array
-      media: media || null, // Set media to null if not provided
+      tags, // Ensure tags is an array
+      media, // Set media to null if not provided
     };
   const token = localStorage.getItem('token')
   const apiKey = localStorage.getItem('apiKey')
+
     const response = await fetch(API_SOCIAL_POSTS, {
       method: 'POST',
       headers: {

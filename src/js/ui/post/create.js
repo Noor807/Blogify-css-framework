@@ -10,13 +10,14 @@ export async function onCreatePost(e) {
   e.preventDefault(); // Prevent the form from submitting the traditional way
 
   // Get values from the form
-  const title = document.getElementById("title").value.trim();
-  const body = document.getElementById("text-area").value.trim();
-  const mediaUrl = document.getElementById("mediaUrl").value.trim();
-  const mediaAlt = document.getElementById("mediaAlt").value.trim();
-  const selectedTags = Array.from(
-    document.querySelectorAll("input[name='tags']:checked")
-  ).map((tag) => tag.value);
+  const title = e.target.title.value.trim();
+  const body = e.target.body.value.trim();
+  const mediaUrl = e.target.mediaUrl.value.trim();
+  const mediaAlt = e.target.mediaAlt.value.trim();
+  const selectedTags = e.target.tags.value ? e.target.tags.value .split(',' ).map(
+    (tag) => tag.trim()
+  ): [];
+  
 
   // Validate required fields
   if (!title || !body) {
@@ -32,16 +33,10 @@ export async function onCreatePost(e) {
     media: mediaUrl || mediaAlt ? { url: mediaUrl, alt: mediaAlt } : null,
   };
 
-  // Get the username from local storage
-  const username = localStorage.getItem("adminUser");
-  if (!username) {
-    alert("Username is not available in local storage.");
-    return;
-  }
 
   // Call the API function to create the blog post
   try {
-    const result = await createBlogPost(username, newPost);
+    const result = await createBlogPost(newPost);
     alert("Blog post created successfully!");
     console.log("Created post:", result);
     // Optionally reset the form or redirect the user
