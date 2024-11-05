@@ -1,16 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
-    <script type="module" src="/src/app.js"></script>
-  </head>
-  <body>
-    <h1>Create Post</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Blog post</title>
+  <script type="module" src="/src/app.js"></script>
+</head>
+
+<body>
+  <header>
+
+  </header>
+
+  <main>
+
+    <h1 class="create-heading">Create Blog Post:</h1>
+
+    <div class="create-blog">
+      <form id="create-blog-form">
+        <input type="hidden" id="blogId" name="blogId" />
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" placeholder="Enter a title here..." required />
+
+        <label for="text-area">Body:</label>
+        <textarea id="text-area" name="text-area" placeholder="Editor body goes here..."></textarea>
+
+        <label for="mediaUrl">Media URL:</label>
+
+        <input type="text" id="mediaUrl" name="mediaUrl" placeholder="Optional" />
+
+        <label for="mediaAlt">Media Alt Text:</label>
+        <input type="text" id="mediaAlt" name="mediaAlt" placeholder="Optional" />
+
+        
+        <button type="submit" class="submit">Create post</button>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- <h1>Create Post</h1>
 
     <form name="createPost">
       <button>Create Post</button>
-    </form>
-  </body>
+    </form> -->
+</body>
+
 </html>
+
+<!-- <div class="tag-container">
+          <label>Tags:</label>
+          <div>
+            <label><input type="checkbox" name="tags" value="Technology" /> Technology</label>
+            <label><input type="checkbox" name="tags" value="Science" /> Science</label>
+            <label><input type="checkbox" name="tags" value="Lifestyle" />Lifestyle</label>
+            <label><input type="checkbox" name="tags" value="Research" /> Research</label>
+            <label><input type="checkbox" name="tags" value="Travel" />Travel
+            </label>
+            <label><input type="checkbox" name="tags" value=" Gaming"/> Gaming</label>
+            <label><input type="checkbox" name="tags" value="Health" /> Health</label>
+          </div>
+        </div> -->

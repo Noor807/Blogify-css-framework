@@ -18,13 +18,10 @@ export async function onLogin(event) {
       email,
       password,
     });
-    console.log(data);
-    localStorage.setItem("token", data.data.accessToken);
-
-    const adminUser = data.data;
-    localStorage.setItem("adminUser", JSON.stringify(adminUser));
+      alert("login successfully");
+      
     window.location.href = "/";
-    alert("login successfully");
+
   } catch (error) {
     console.error("Login failed:", error);
     alert("Login failed. Please check your credentials and try again.");

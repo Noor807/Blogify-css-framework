@@ -1,6 +1,6 @@
 // Use Postman, or JavaScript to get your API key
 // In Workflow we will learn how to secure this information
-export const API_KEY = "f8cdd196-a221-425c-93ee-bf2bec1bb447";
+export const API_KEY = 'b29ee457-b896-4a9d-9561-a4679c73693c';
 
 export const API_BASE = "https://v2.api.noroff.dev";
 
@@ -19,6 +19,14 @@ export const API_SOCIAL_POSTS = `${API_SOCIAL}/posts`;
 export const API_SOCIAL_PROFILES = `${API_SOCIAL}/profiles`;
 
 
+
+
+const options = {
+    headers: {
+      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibm9vcjgwNyIsImVtYWlsIjoibm9vcjgwN0Bub3JvZmYubm8iLCJpYXQiOjE3MzA1MDIyNjd9.HPvVZ7ZoG35eZGwkDPoEdQ7TtbHOQKOspvmD4da7np4',
+      'X-Noroff-API-Key': 'b29ee457-b896-4a9d-9561-a4679c73693c'
+    }
+  };
 
 
 
