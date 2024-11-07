@@ -1,48 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noroff FED2 JS2 CA</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noroff FED2 JS2 CA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&family=Open+Sans:wght@400;700&display=swap"
-    rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script type="module" src="/src/app.js"></script>
+  </head>
 
-  <link rel="stylesheet" href="./src/css/style.css">
-  <script type="module" src="/src/app.js"></script>
-</head>
-
-<body>
-  <header>
-    <div class="navbar">
-      <img class="logo" src="/images/noroff-logo.png" alt="noroff logo">
-      <ul>
-        <li>
-          <a href="/profile/">My Profile</a>
-          <a href="/auth/login/">Login</a>
-          <a href="/auth/register/">Register</a>
-        </li>
-      </ul>
-
-    </div>
-    <button id="logout">Logout</button>
-  </header>
-
-  <main>
-    
-    <section class="blog-section">
-      <h2 class="create-heading">Blog posts</h2>
-
-      <div id="blog-container">
+  <body>
+    <header>
+      <div class="navbar">
+        <img class="logo" src="/images/noroff-logo.png" alt="noroff logo" />
+        <ul>
+          <li>
+            <a href="/profile/">My Profile</a>
+            <a href="/auth/login/">Login</a>
+            <a href="/auth/register/">Register</a>
+            <button id="logout">Logout</button>
+          </li>
+        </ul>
       </div>
-  </section>
+    </header>
 
-  </main>
+    <main>
+      <section class="blog-section">
+        <h2 class="create-heading">Blog posts</h2>
 
-  <footer>
+        <div id="blogContainer"></div>
+      </section>
+    </main>
 
-  </footer>
-</body>
-
+    <footer></footer>
+  </body>
 </html>
+
+
+
+

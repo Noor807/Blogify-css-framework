@@ -1,3 +1,5 @@
+import { API_SOCIAL_POSTS, API_SOCIAL_PROFILES } from "../constants";
+
 /**
  * Reads a single post by its ID.
  *
@@ -16,7 +18,35 @@ export async function readPost(id) {}
  * @returns {Promise<Object>} An object containing an array of posts in the `data` field, and information in a `meta` field.
  * @throws {Error} If the API request fails.
  */
-export async function readPosts(limit = 12, page = 1, tag) {}
+export async function readPosts(limit = 12, page = 1, tag) {
+    const URL = `${API_SOCIAL_POSTS }?limit=${limit}&page=${page}&_author=true`
+    const token = localStorage.getItem('token');
+    const apiKey = localStorage.getItem('apiKey');
+    
+    try {
+        const response = fetch(URL, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`,
+              'X-Noroff-API-Key': apiKey,
+            },
+        }) 
+
+        //if (!response.ok) {
+           //const errorData = await response.json();
+            //console.error('Error:', errorData);
+            //throw new Error(`Failed to fetch blog post: ${errorData.message}`);
+          //}
+          const data = (await response).json();
+          return data
+
+    } catch (error) {
+        console.error('fail to fetch blog' , error)
+    }
+}
+
+
 
 /**
  * Reads multiple posts by a specific user with optional pagination and tagging.
@@ -28,4 +58,7 @@ export async function readPosts(limit = 12, page = 1, tag) {}
  * @returns {Promise<object>} Object with data and meta fields.
  * @throws {Error} If the API request fails.
  */
-export async function readPostsByUser(username, limit = 12, page = 1, tag) {}
+export async function readPostsByUser(username, limit = 12, page = 1, tag) {
+     
+   
+}
