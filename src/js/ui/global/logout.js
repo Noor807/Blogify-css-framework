@@ -5,11 +5,8 @@
 // This function adds the logout event listener to the button with id="logout"
 import { onLogout } from "../auth/logout";
 export function setLogoutListener() {
-    const logoutButton = document.getElementById('logout');
+  const logoutButton = document.getElementById("logout-Btn");
 
-    if (logoutButton) {
-        logoutButton.addEventListener('click', () => onLogout);
-    } else {
-        console.warn('Logout button not found!');
-    }
+  logoutButton.addEventListener("click", onLogout);
+ 
 }

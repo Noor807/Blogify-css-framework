@@ -1,5 +1,7 @@
 import { API_SOCIAL_POSTS, API_SOCIAL_PROFILES } from "../constants";
-
+const token = localStorage.getItem('token');
+const apiKey = localStorage.getItem('apiKey');
+    
 /**
  * Reads a single post by its ID.
  *
@@ -11,10 +13,12 @@ import { API_SOCIAL_POSTS, API_SOCIAL_PROFILES } from "../constants";
 
 export async function readPost(id) {
     try {
-      const response = await fetch(`${API_BASE}/social/posts/${id}`, {
+      const response = await fetch(`${API_SOCIAL_POSTS}/${id}?_author=true`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+         'X-Noroff-API-Key': apiKey,
         },
       });
   
@@ -29,7 +33,8 @@ export async function readPost(id) {
       throw error;
     }
   }
-
+  
+  
 /**
  * Reads multiple posts with optional pagination and tagging.
  *
@@ -41,15 +46,13 @@ export async function readPost(id) {
  */
 export async function readPosts(limit = 12, page = 1, tag) {
     const URL = `${API_SOCIAL_POSTS}?limit=${limit}&page=${page}&_author=true${tag ? `&tag=${tag}` : ''}`;
-    const token = localStorage.getItem('token');
-    const apiKey = localStorage.getItem('apiKey');
     
     try {
         const response = await fetch(URL, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': `Bearer ${token}`,
+              Authorization: `Bearer ${token}`,
               'X-Noroff-API-Key': apiKey,
             },
         });
