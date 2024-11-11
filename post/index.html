@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,12 +8,24 @@
     <script type="module" src="/src/app.js"></script>
   </head>
   <body>
+    <header>
+      <div class="navbar">
+        <img class="logo" src="/images/noroff-logo.png" alt="noroff logo" />
+        <ul>
+          <li>
+            <a href="/profile/">My Profile</a>
+            <a href="/auth/login/">Login</a>
+            <a href="/auth/register/">Register</a>
+            <button id="logout-Btn" type="button">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
     <main class="blog-brief">
       <div id="singlePostContainer"></div>
-
-
-  </main>
-  
-
+      
+      <a class="edit-btn admin-hidden" href="../post/edit.html">Edit post</a>
+    </main>
   </body>
 </html>

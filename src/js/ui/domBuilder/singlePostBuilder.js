@@ -41,3 +41,25 @@ export async function RenderSinglePost(postId) {
       console.error("Error fetching and displaying the post:", error);
     }
   }
+  
+
+  function initEditButton(postId) {
+    const editButton = document.querySelector(".edit-btn");
+  
+    if (!editButton) {
+      console.error("Edit button not found.");
+      return;
+    }
+  
+    // Make the button visible (removing 'admin-hidden' if necessary)
+    editButton.classList.remove("admin-hidden");
+  
+    // Add click event to the button
+    editButton.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent default link behavior
+  
+      // Redirect to the edit page with the post ID as a query parameter
+      window.location.href = `../post/edit.html?post=${postId}`;
+    });
+  }
+  
