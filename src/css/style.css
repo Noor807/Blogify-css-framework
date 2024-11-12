@@ -409,9 +409,9 @@ input[type="text"][placeholder="Optional"] {
     background-color: #0056b3;
   }
   
-  .admin-hidden {
-    display: none; /* Adjust this with JavaScript to show for admin users */
-  }
+  /*.admin-hidden {
+    display: none; /* Adjust this with JavaScript to show for admin users 
+  }*/
   
   /* Author and Date Styling */
   .author, .date {

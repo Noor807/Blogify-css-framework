@@ -12,4 +12,45 @@
  * @returns {Promise<Object>} The updated post data from the API.
  * @throws {Error} If the API request fails.
  */
-export async function updatePost(id, { title, body, tags, media }) {}
+
+export async function updatePost(id, { title, body, tags = [], media = {} }) {
+    const API_URL = `${API_SOCIAL_POSTS}/${id}`;
+    const token = localStorage.getItem('token')
+    const apiKey = localStorage.getItem('apiKey')
+
+    // Build the request body with mandatory fields
+    const requestBody = {
+        title,
+        body,
+    };
+
+    // Conditionally add optional fields if they are provided
+    if (tags.length > 0) {
+        requestBody.tags = tags;
+    }
+
+    if (media.url) {
+        requestBody.media = media;
+    }
+
+    try {
+        const response = await fetch(API_URL, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
+                'X-Noroff-API-Key': apiKey,
+            },
+            body: JSON.stringify(requestBody),
+        });
+
+        if (!response.ok) {
+            throw new Error("Failed to update the post");
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error("Error updating the post:", error);
+        throw error;
+    }
+}

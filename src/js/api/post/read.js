@@ -35,7 +35,6 @@ export async function readPost(id) {
   }
   
   
-  
 /**
  * Reads multiple posts with optional pagination and tagging.
  *
@@ -72,6 +71,7 @@ export async function readPosts(limit = 12, page = 1, tag) {
         throw error; // Re-throw the error to handle it where the function is called if needed
     }
 }
+
 
 
 /**

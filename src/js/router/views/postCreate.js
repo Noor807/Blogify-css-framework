@@ -1,5 +1,7 @@
+import { setLogoutListener } from "../../ui/global/logout";
 import { onCreatePost } from "../../ui/post/create";
 import { authGuard } from "../../utilities/authGuard";
+setLogoutListener()
 
 authGuard();
 
