@@ -63,8 +63,8 @@ export async function readPosts(limit = 12, page = 1, tag) {
             throw new Error(`Failed to fetch blog posts: ${errorData.message}`);
         }
         
-        const data = await response.json();
-        return data;
+        const{meta, data} = await response.json();
+        return{meta, data} ;
 
     } catch (error) {
         console.error('Failed to fetch blog posts', error);

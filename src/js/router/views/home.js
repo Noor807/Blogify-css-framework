@@ -8,8 +8,8 @@ setLogoutListener()
 const user ='haniah123'
 const limit = 12
 const page = 1
-const post = await readPosts( 12, 1)
-console.log(post);
-renderBlogPosts(post.data) 
+const {meta, data} = await readPosts( 12, 1)
+console.log(meta);
+renderBlogPosts(data) 
 
   

@@ -1,4 +1,4 @@
-export function renderBlogPosts(postsArray) {
+export function renderBlogPosts(array) {
   const blogContainer = document.querySelector("#blogContainer");
 
   if (!blogContainer) {
@@ -6,7 +6,7 @@ export function renderBlogPosts(postsArray) {
     return;
   }
 
-  postsArray.forEach((post) => {
+  array.forEach((post) => {
     // Destructure with default values for safety
     const {
       id = "unknown",
