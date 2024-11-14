@@ -1,6 +1,6 @@
 import { API_SOCIAL_POSTS, API_SOCIAL_PROFILES } from "../constants";
-const token = localStorage.getItem('token');
-const apiKey = localStorage.getItem('apiKey');
+import { headers } from "../headers";
+
     
 /**
  * Reads a single post by its ID.
@@ -10,16 +10,20 @@ const apiKey = localStorage.getItem('apiKey');
  * @throws {Error} If the API request fails.
  */
 //export async function readPost(id) {}
+const headersObject = headers();
+
+headersObject.append("Content-Type", "application/json");
+
+const token = localStorage.getItem("token");
+if (token) {
+  headersObject.append("Authorization", `Bearer ${token}`);
+}
 
 export async function readPost(id) {
     try {
       const response = await fetch(`${API_SOCIAL_POSTS}/${id}?_author=true`, {
         method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-         'X-Noroff-API-Key': apiKey,
-        },
+        headers: headersObject,
       });
   
       if (!response.ok) {
@@ -50,11 +54,7 @@ export async function readPosts(limit = 12, page = 1, tag) {
     try {
         const response = await fetch(URL, {
             method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: `Bearer ${token}`,
-              'X-Noroff-API-Key': apiKey,
-            },
+            headers: headersObject,
         });
 
         if (!response.ok) {

@@ -21,12 +21,6 @@ export const API_SOCIAL_PROFILES = `${API_SOCIAL}/profiles`;
 
 
 
-const options = {
-    headers: {
-      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibm9vcjgwNyIsImVtYWlsIjoibm9vcjgwN0Bub3JvZmYubm8iLCJpYXQiOjE3MzA1MDIyNjd9.HPvVZ7ZoG35eZGwkDPoEdQ7TtbHOQKOspvmD4da7np4',
-      'X-Noroff-API-Key': 'b29ee457-b896-4a9d-9561-a4679c73693c'
-    }
-  };
 
 
 

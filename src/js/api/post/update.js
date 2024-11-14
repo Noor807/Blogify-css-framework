@@ -1,3 +1,5 @@
+import { headers } from "../headers";
+
 /**
  * Updates an existing post by sending updated data to the API.
  *
@@ -12,11 +14,18 @@
  * @returns {Promise<Object>} The updated post data from the API.
  * @throws {Error} If the API request fails.
  */
+const headersObject = headers();
+
+headersObject.append("Content-Type", "application/json");
+
+const token = localStorage.getItem("token");
+if (token) {
+  headersObject.append("Authorization", `Bearer ${token}`);
+}
 
 export async function updatePost(id, { title, body, tags = [], media = {} }) {
     const API_URL = `${API_SOCIAL_POSTS}/${id}`;
-    const token = localStorage.getItem('token')
-    const apiKey = localStorage.getItem('apiKey')
+   
 
     // Build the request body with mandatory fields
     const requestBody = {
@@ -36,11 +45,7 @@ export async function updatePost(id, { title, body, tags = [], media = {} }) {
     try {
         const response = await fetch(API_URL, {
             method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${token}`,
-                'X-Noroff-API-Key': apiKey,
-            },
+            headers: headersObject,
             body: JSON.stringify(requestBody),
         });
 

@@ -12,35 +12,39 @@
  * @throws {Error} If the API request fails.
  */
 
-
 import { API_SOCIAL_POSTS } from "../constants";
-export async function createBlogPost( { title, body, tags, media }) {
-    const blogPost = {
-      title,
-      body,
-      tags, // Ensure tags is an array
-      media, // Set media to null if not provided
-    };
-  const token = localStorage.getItem('token')
-  const apiKey = localStorage.getItem('apiKey')
+import { headers } from "../headers";
+const headersObject = headers();
 
-    const response = await fetch(API_SOCIAL_POSTS, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
-        'X-Noroff-API-Key': apiKey,
-      },
-      body: JSON.stringify(blogPost),
-    });
-  
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error('Error creating blog post:', errorData);
-      throw new Error(`Failed to create blog post: ${errorData.message}`);
-    }
-  
-    const result = await response.json();
-    return result; // Return the created blog post
+headersObject.append("Content-Type", "application/json");
+
+const token = localStorage.getItem("token");
+if (token) {
+  headersObject.append("Authorization", `Bearer ${token}`);
+}
+
+export async function createBlogPost({ title, body, tags, media }) {
+  const blogPost = {
+    title,
+    body,
+    tags,
+    media,
+  };
+
+  console.log(headersObject);
+  const response = await fetch(API_SOCIAL_POSTS, {
+    method: "POST",
+    headers: headersObject,
+
+    body: JSON.stringify(blogPost),
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json();
+    console.error("Error creating blog post:", errorData);
+    throw new Error(`Failed to create blog post: ${errorData.message}`);
   }
-  
+
+  const result = await response.json();
+  return result; // Return the created blog post
+}

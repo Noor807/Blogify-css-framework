@@ -1,18 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
-    <link rel="stylesheet" href="../../src/css/style.css">
+    <link rel="stylesheet" href="../../src/css/style.css" />
     <script type="module" src="/src/app.js"></script>
   </head>
 
   <body>
     <header>
       <div class="navbar">
-        <img class="logo" src="/public/images/noroff-logo.png" alt="logo of website">
+        <img
+          class="logo"
+          src="/public/images/noroff-logo.png"
+          alt="logo of website"
+        />
         <ul>
           <li>
             <a href="/profile/">My Profile</a>
@@ -24,40 +28,53 @@
       </div>
     </header>
 
-  <main>
+    <main>
+      <h1>Edit Post</h1>
 
-    <h1>Edit Post</h1>
+      <div class="create-blog">
+        <form name="editPost" id="create-blog-form">
+          <input type="hidden" id="blogId" name="blogId" />
 
-    <div class="create-blog">
-      <form name="editPost" id="create-blog-form">
-      
-        <input type="hidden" id="blogId" name="blogId" />
+          <label for="title">Title:</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter a title here..."
+            required
+          />
 
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" placeholder="Enter a title here..." required />
+          <label for="body">Body:</label>
+          <textarea
+            id="body"
+            name="body"
+            placeholder="Editor body goes here..."
+            maxlength="280"
+          ></textarea>
 
-        <label for="body">Body:</label>
-        <textarea id="body" name="body" placeholder="Editor body goes here..." maxlength="280"></textarea>
+          <label for="tags">tags</label>
+          <input type="text" id="tags" name="tags" />
 
-        <label for="tags">tags</label>
-        <input type="text" id="tags" name="tags">
+          <label for="mediaUrl">Media URL:</label>
 
+          <input
+            type="text"
+            id="mediaUrl"
+            name="mediaUrl"
+            placeholder="Optional"
+          />
 
-        <label for="mediaUrl">Media URL:</label>
+          <label for="mediaAlt">Media Alt Text:</label>
+          <input
+            type="text"
+            id="mediaAlt"
+            name="mediaAlt"
+            placeholder="Optional"
+          />
 
-        <input type="text" id="mediaUrl" name="mediaUrl" placeholder="Optional" />
-
-        <label for="mediaAlt">Media Alt Text:</label>
-        <input type="text" id="mediaAlt" name="mediaAlt" placeholder="Optional" />
-
-        
-        <button type="submit" class="submit">Create post</button>
-      </form>
-
-    </div>
-      <button>Edit Post</button>
-    </form>
-  </main>
-  
+          <button type="submit" class="submit">update post</button>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
