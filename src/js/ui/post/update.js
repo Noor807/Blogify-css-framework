@@ -1,7 +1,7 @@
 import { updatePost } from "../../api/post/update";
 
 /**
- * Passses data to the createPost function in api/post and handles the response
+ * Passes data to the createPost function in api/post and handles the response
  */
 export async function onUpdatePost(e) {
   e.preventDefault(); // Prevent the form from submitting the traditional way

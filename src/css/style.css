@@ -18,8 +18,9 @@ h3,
 a {
   font-family: "Merriweather", serif;
 }
+/* General Navbar Styling */
 
-.a-btn {
+ .a-btn {
   font-family: sans-serif;
   color: rgb(34, 34, 225);
   font-size: 500;
@@ -27,7 +28,7 @@ a {
 }
 
 .navbar {
-  background-color: #553bb1;
+  background-color: #393743;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -59,7 +60,7 @@ a {
 
 .navbar a:hover {
   background-color: #575757;
-}
+} 
 
 button {
   background-color: rgb(169, 178, 10);
@@ -124,7 +125,7 @@ button:hover {
   height: 800px;
   width: 100%;
   max-width: 1000px;
-  background-color: rgb(147, 144, 245);
+  background-color:  #544e6d;
   display: flex;
   align-items: center;
   justify-content: center;
