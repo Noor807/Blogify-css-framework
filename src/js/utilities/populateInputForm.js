@@ -10,4 +10,6 @@ export function populateInputForm(post) {
     document.forms.editPost.mediaAlt.value = post.data.media
       ? post.data.media.alt
       : "";
+      document.forms.editPost.id.value = post.data.id;
   }
+  

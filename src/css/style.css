@@ -19,12 +19,11 @@ a {
   font-family: "Merriweather", serif;
 }
 
-.a-btn{
+.a-btn {
   font-family: sans-serif;
   color: rgb(34, 34, 225);
   font-size: 500;
   text-decoration: none;
-  
 }
 
 .navbar {
@@ -33,7 +32,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 10px;
 }
 
 .navbar .logo {
@@ -44,13 +43,6 @@ a {
   margin: 0;
   font-size: 24px;
   font-weight: 900;
-}
-
-.navbar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
 }
 
 .navbar li {
@@ -74,7 +66,7 @@ button {
   color: rgb(17, 17, 17);
   border: none;
   width: 100%;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 1rem;
@@ -87,7 +79,23 @@ button:hover {
   background-color: #c0392b;
 }
 
-/*--------------------login form-----------------*/
+#logout-Btn {
+  background-color: rgb(169, 178, 10);
+  color: rgb(17, 17, 17);
+  border: none;
+  width: 100%;
+  max-width: 150px;
+  max-width: 200px;
+  padding: 10px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s;
+}
+
+/*--------------------login form-----------------------------*/
 
 .login-main {
   display: flex;
@@ -267,89 +275,126 @@ input[type="text"][placeholder="Optional"] {
   font-style: italic;
   color: #888;
 }
+/*--------------------------carousel-btn------------------------------------------------------------*/
+.caraousel-btn {
+  display: flex; /* Display buttons in a row */
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Align buttons vertically in the container */
+  margin-top: 20px; /* Add some space above the buttons */
+  gap: 10px; /* Add spacing between the buttons */
+}
+
+.caraousel-btn button {
+  background-color: #007bff; /* Button background color (blue) */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 10px; /* Button size (padding) */
+  font-size: 16px; /* Text size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.caraousel-btn button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.caraousel-btn button:active {
+  background-color: #003f7f; /* Even darker blue on click */
+  transform: scale(0.95); /* Slightly shrink button on click */
+}
+
+.caraousel-btn button:disabled {
+  background-color: #d3d3d3; /* Light gray for disabled state */
+  color: #666666; /* Gray text for disabled state */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+
 /*------------------------blogContainer.----------------------------
 /*_----------------------------------------------------------------------------
 
   /* Container for all blog posts */
 /* For larger screens: 3 columns */
-#blogContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 60px;
-  padding: 20px;
-  width: 100%;
-}
-
+/* Blog Section Styling */
+/* Blog Section Styling */
+/* Blog Section Styling */
 .blog-section {
-  max-width: 1200px;
+  max-width: 1200px; /* Increased width to accommodate more blogs */
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
 }
 
+/* Blog Section Heading */
 .create-heading {
   font-size: 2em;
   color: #333;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 /* Blog Container Styling */
 #blogContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Flexible grid for multiple blogs */
+  gap: 30px; /* Larger gap for better separation */
+  padding: 20px;
+  width: 100%;
 }
 
 /* Individual Blog Post Styling */
 .blog-dev {
   display: block;
   background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Enhanced border radius for modern look */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
   text-decoration: none;
   color: inherit;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-dev:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px); /* Higher hover effect for interactivity */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Elevated shadow on hover */
 }
 
 /* Blog Post Image Styling */
 .blog-dev img {
   width: 100%;
-  height: 180px;
+  height: 150px; /* Balanced height for blog images */
   object-fit: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 /* Blog Post Content Styling */
 .blog-dev div {
-  padding: 15px;
+  padding: 20px; /* Comfortable padding for content */
 }
 
 /* Blog Post Title */
 .title {
-  font-size: 1.5em;
+  font-size: 1.4em; /* Slightly smaller title size */
   color: #333;
   margin: 10px 0;
+  font-weight: bold;
 }
 
 /* Blog Post Author */
 .author {
   font-size: 0.9em;
-  color: #555;
-  margin-bottom: 5px;
+  color: #666;
+  margin-bottom: 8px;
 }
 
 /* Blog Post Created Date */
 .created {
-  font-size: 0.9em;
-  color: #888;
-  margin-bottom: 5px;
+  font-size: 0.8em;
+  color: #999;
+  margin-bottom: 8px;
 }
 
 /* Blog Post Tags */
@@ -357,6 +402,14 @@ input[type="text"][placeholder="Optional"] {
   font-size: 0.9em;
   color: #007bff;
   font-style: italic;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  #blogContainer {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid for smaller devices */
+    gap: 20px; /* Smaller gap on mobile */
+  }
 }
 
 /*-------------------------single blog post---------------------------------

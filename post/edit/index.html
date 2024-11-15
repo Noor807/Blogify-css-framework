@@ -32,7 +32,7 @@
       <h1>Edit Post</h1>
 
       <div class="create-blog">
-        <form name="editPost" id="create-blog-form">
+        <form name="editPost">
           <input type="hidden" id="blogId" name="blogId" />
 
           <label for="title">Title:</label>
@@ -71,8 +71,9 @@
             name="mediaAlt"
             placeholder="Optional"
           />
+          <input type="hidden" name="id" >
 
-          <button type="submit" class="submit">update post</button>
+          <button id="update-btn" type="submit" class="submit">update post</button>
         </form>
       </div>
     </main>

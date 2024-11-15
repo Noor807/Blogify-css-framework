@@ -48,29 +48,55 @@ export async function readPost(id) {
  * @returns {Promise<Object>} An object containing an array of posts in the `data` field, and information in a `meta` field.
  * @throws {Error} If the API request fails.
  */
+
 export async function readPosts(limit = 12, page = 1, tag) {
-    const URL = `${API_SOCIAL_POSTS}?limit=${limit}&page=${page}&_author=true${tag ? `&tag=${tag}` : ''}`;
-    
-    try {
-        const response = await fetch(URL, {
-            method: 'GET',
-            headers: headersObject,
-        });
+  const URL = `${API_SOCIAL_POSTS}?limit=${limit}&page=${page}&_author=true${tag ? `&tag=${tag}` : ''}`;
+  
+  try {
+    const response = await fetch(URL, {
+      method: 'GET',
+      headers: headersObject,
+    });
 
-        if (!response.ok) {
-            const errorData = await response.json();
-            console.error('Error:', errorData);
-            throw new Error(`Failed to fetch blog posts: ${errorData.message}`);
-        }
-        
-        const{meta, data} = await response.json();
-        return{meta, data} ;
-
-    } catch (error) {
-        console.error('Failed to fetch blog posts', error);
-        throw error; // Re-throw the error to handle it where the function is called if needed
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error('Error:', errorData);
+      throw new Error(`Failed to fetch blog posts: ${errorData.message}`);
     }
+    
+    const { meta, data } = await response.json();
+    return { meta, data };
+
+  } catch (error) {
+    console.error('Failed to fetch blog posts', error);
+    throw error; // Re-throw the error to handle it where the function is called if needed
+  }
 }
+
+
+// export async function readPosts(limit = 12, page = 1, tag) {
+//     const URL = `${API_SOCIAL_POSTS}?limit=${limit}&page=${page}&_author=true${tag ? `&tag=${tag}` : ''}`;
+    
+//     try {
+//         const response = await fetch(URL, {
+//             method: 'GET',
+//             headers: headersObject,
+//         });
+
+//         if (!response.ok) {
+//             const errorData = await response.json();
+//             console.error('Error:', errorData);
+//             throw new Error(`Failed to fetch blog posts: ${errorData.message}`);
+//         }
+        
+//         const{meta, data} = await response.json();
+//         return{meta, data} ;
+
+//     } catch (error) {
+//         console.error('Failed to fetch blog posts', error);
+//         throw error; // Re-throw the error to handle it where the function is called if needed
+//     }
+// }
 
 
 
