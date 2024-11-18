@@ -73,33 +73,6 @@ export async function readPosts(limit = 12, page = 1, tag) {
   }
 }
 
-
-// export async function readPosts(limit = 12, page = 1, tag) {
-//     const URL = `${API_SOCIAL_POSTS}?limit=${limit}&page=${page}&_author=true${tag ? `&tag=${tag}` : ''}`;
-    
-//     try {
-//         const response = await fetch(URL, {
-//             method: 'GET',
-//             headers: headersObject,
-//         });
-
-//         if (!response.ok) {
-//             const errorData = await response.json();
-//             console.error('Error:', errorData);
-//             throw new Error(`Failed to fetch blog posts: ${errorData.message}`);
-//         }
-        
-//         const{meta, data} = await response.json();
-//         return{meta, data} ;
-
-//     } catch (error) {
-//         console.error('Failed to fetch blog posts', error);
-//         throw error; // Re-throw the error to handle it where the function is called if needed
-//     }
-// }
-
-
-
 /**
  * Reads multiple posts by a specific user with optional pagination and tagging.
  *
