@@ -67,7 +67,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #1592B4; /* Use your desired background color */
+  background-color: #1592B4; 
   color: white;
 }
 
@@ -93,7 +93,7 @@ body {
 
 .navbar ul li {
   display: flex;
-  gap: 5px; /* Spacing between links */
+  gap: 5px; 
   align-items: center;
 }
 
@@ -106,7 +106,7 @@ body {
 }
 
 .navbar ul li a:hover {
-  background-color: #E0A030; /* Hover color */
+  background-color: #E0A030; 
   border-radius: 5px;
 }
 
@@ -214,21 +214,21 @@ form input[type="password"]:focus {
 }
 
 .login-btn {
-  background-color: var(--brown); /* Primary blue */
-  color: #fff; /* White text */
-  font-size: 16px; /* Adjust size */
-  font-weight: bold; /* Make text bold */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  padding: 10px 20px; /* Add spacing */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: all 0.3s ease; /* Smooth hover effect */
+  background-color: var(--brown); 
+  color: #fff;
+  font-size: 16px; 
+  font-weight: bold; 
+  border: none; 
+  border-radius: 5px; 
+  padding: 10px 20px; 
+  cursor: pointer;
+  transition: all 0.3s ease; 
 }
 
 /* Hover effect */
 .login-btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+  background-color: #0056b3; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
 
@@ -258,13 +258,13 @@ main {
 }
 
 .create-blog {
-  max-width: 600px; /* Maximum width for the form */
-  margin: 100px auto; /* Centers the form with top/bottom margin */
-  padding: 20px; /* Adds padding around the form */
-  background-color: #fff; /* White background for the form */
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 20px; 
+  background-color: #fff; 
   border: 2px solid #E0A030;
-  border-radius: 8px; /* Softens the edges of the container */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 #create-blog-form {
   display: flex;
@@ -316,52 +316,49 @@ input[type="text"][placeholder="Optional"] {
   color: #888;
 }
 /*--------------------------carousel-btn------------------------------------------------------------*/
-.caraousel-btn {
-  display: flex; /* Display buttons in a row */
-  justify-content: center; /* Center buttons horizontally */
-  align-items: center; /* Align buttons vertically in the container */
-  margin-top: 20px; /* Add some space above the buttons */
-  gap:50px; /* Add spacing between the buttons */
+.carousel-btn{
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 20px; 
+  gap:50px; 
 }
 
-.caraousel-btn button {
-  background-color: var(--brown); /* Button background color (blue) */
-  color: white; /* Button text color */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-  padding:10px 20px; /* Button size (padding) */
-  font-size: 16px; /* Text size */
-  font-weight: bold; /* Bold text */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+.carousel-btn button {
+  background-color: var(--brown); 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  padding:10px 20px; 
+  font-size: 16px; 
+  font-weight: bold; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
-.caraousel-btn button:hover {
-  background-color: (--brown); /* Darker blue on hover */
-  transform: scale(1.05); /* Slightly enlarge button on hover */
+.carousel-btn button:hover {
+  background-color: (--brown); 
+  transform: scale(1.05); 
 }
 
-.caraousel-btn button:active {
-  background-color: #003f7f; /* Even darker blue on click */
-  transform: scale(0.95); /* Slightly shrink button on click */
+.carousel-btn button:active {
+  background-color: #003f7f; 
+  transform: scale(0.95); 
 }
 
-.caraousel-btn button:disabled {
-  background-color: #d3d3d3; /* Light gray for disabled state */
-  color: #666666; /* Gray text for disabled state */
-  cursor: not-allowed; /* Change cursor to indicate disabled state */
+.carousel-btn button:disabled {
+  background-color: #d3d3d3;
+  color: #666666; 
+  cursor: not-allowed; 
 }
 
 /*------------------------blogContainer.----------------------------
 /*_----------------------------------------------------------------------------
 
   /* Container for all blog posts */
-/* For larger screens: 3 columns */
-/* Blog Section Styling */
-/* Blog Section Styling */
-/* Blog Section Styling */
+
 .blog-section {
-  max-width: 1200px; /* Increased width to accommodate more blogs */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -378,8 +375,8 @@ input[type="text"][placeholder="Optional"] {
 /* Blog Container Styling */
 #blogContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Flexible grid for multiple blogs */
-  gap: 30px; /* Larger gap for better separation */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+  gap: 30px;
   padding: 20px;
   width: 100%;
 }
@@ -388,8 +385,8 @@ input[type="text"][placeholder="Optional"] {
 .blog-dev {
   display: block;
   background-color: #ffffff;
-  border-radius: 10px; /* Enhanced border radius for modern look */
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  border-radius: 10px; 
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); 
   text-decoration: none;
   border: 1px solid grey;
   color: inherit;
@@ -398,14 +395,14 @@ input[type="text"][placeholder="Optional"] {
 }
 
 .blog-dev:hover {
-  transform: translateY(-8px); /* Higher hover effect for interactivity */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Elevated shadow on hover */
+  transform: translateY(-8px); 
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
 }
 
 /* Blog Post Image Styling */
 .blog-dev img {
   width: 100%;
-  height: 150px; /* Balanced height for blog images */
+  height: 150px; 
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -413,12 +410,12 @@ input[type="text"][placeholder="Optional"] {
 
 /* Blog Post Content Styling */
 .blog-dev div {
-  padding: 20px; /* Comfortable padding for content */
+  padding: 20px; 
 }
 
 /* Blog Post Title */
 .title {
-  font-size: 1.4em; /* Slightly smaller title size */
+  font-size: 1.4em; 
   color: #333;
   margin: 10px 0;
   font-weight: bold;
@@ -448,8 +445,8 @@ input[type="text"][placeholder="Optional"] {
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   #blogContainer {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid for smaller devices */
-    gap: 20px; /* Smaller gap on mobile */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px; 
   }
 }
 
@@ -498,40 +495,40 @@ img {
 
 /* Specific styling for Edit Button */
 .edit-btn {
-  background-color: var(--brown); /* Green for edit */
-  color: #fff; /* White text */
-  margin-right: 10px; /* Spacing between buttons */
+  background-color: var(--brown); 
+  color: #fff; 
+  margin-right: 10px; 
 
 }
 
 .edit-btn:hover {
-  background-color: lightsalmon; /* Darker green on hover */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+  background-color: lightsalmon; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
 .edit-btn:active {
-  transform: scale(0.98); /* Slight press effect */
+  transform: scale(0.98); 
 }
 
 /* Specific styling for Delete Button */
 .del-btn {
-  background-color:burlywood; /* Red for delete */
-  color:black; /* White text */
+  background-color:burlywood; 
+  color:black; 
 }
 
 .del-btn:hover {
-  background-color: lightsalmon; /* Darker red on hover */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+  background-color: lightsalmon; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
 .del-btn:active {
-  transform: scale(0.98); /* Slight press effect */
+  transform: scale(0.98); 
 }
 
 
 /* Example of showing admin buttons (if needed dynamically) */
 .show-admin .admin-hidden {
-  display: inline-block; /* Make buttons visible */
+  display: inline-block; 
 }
 
 
