@@ -64,3 +64,8 @@ export function renderBlogPosts(array) {
     blogContainer.appendChild(postLink);
   });
 }
+
+
+
+
+

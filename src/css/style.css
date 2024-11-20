@@ -550,3 +550,21 @@ div > div {
   color: #333;
   margin-top: 20px;
 }
+
+/*--------------------search bar---------------------------*/
+.search-container {
+  margin-bottom: 20px;
+}
+.post {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.post-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.post-body {
+  font-size: 16px;
+}
