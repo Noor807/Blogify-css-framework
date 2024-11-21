@@ -18,7 +18,7 @@ if(searchBar){
         if (tag==='') {
             fetchPosts()   
         } else {
-            fetchPosts(1, tag) 
+            fetchPosts(tag) 
             
         }
     })
