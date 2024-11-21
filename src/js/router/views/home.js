@@ -11,9 +11,9 @@ setLogoutListener();
 
 // Initial fetch to load the first page
 fetchPosts();  // Loads the first page by default
-const searchBar = document.querySelector('#searchInput');
+const searchBar = document.getElementById('searchInput');
 if(searchBar){
-    searchBar.addEventListener('keyup' , ()=>{
+    searchBar.addEventListener('keyup' , () => {
         const tag = searchBar.value.trim()
         if (tag==='') {
             fetchPosts()   
