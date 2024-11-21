@@ -5,10 +5,10 @@ import { renderBlogPosts } from "../domBuilder/homeBuilder";
 let currentPage = 1;  // Start on page 1
 const limit = 12
 // Exported function to fetch and display posts for a given page
-export const fetchPosts = async (page = 1, tag='') => {
+export const fetchPosts = async (page = 1, tag = '') => {
   try {
     // Fetch posts using the existing readPosts function
-    const { data, meta } = await readPosts(limit,page,tag='');  // Destructure the response
+    const { data, meta } = await readPosts(limit, page ,tag);  // Destructure the response
 document.getElementById('blogContainer').innerHTML = ''
     // Pass the data to your homeBuilder function
     renderBlogPosts(data);
