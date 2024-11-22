@@ -9,6 +9,7 @@
     <script type="module" src="/src/app.js"></script>
   </head>
   <body>
+    <header>
     <div class="profile-container">
       <!-- Background Section -->
       <div class="profile-background">
@@ -25,6 +26,7 @@
           <span>Posts: <strong>7</strong></span>
         </div>
       </div>
+    </header>
   
       <!-- Bio Section -->
       <div class="bio-section">
@@ -34,6 +36,7 @@
     </div>
 
       <!------------------------------ Posts Section ------------------------------------->
+      <main>
       <section class="posts-section">
         <h3 class="section-title">Posts</h3>
         <div class="posts-grid">
@@ -57,25 +60,25 @@
       </section>
     </div>
 
-
-    <h1>Update Profile</h1>
-    <form id="updateProfileForm">
-      <label for="username">Username:</label><br />
-      <input type="text" id="username" name="username" required /><br /><br />
-
-      <label for="avatar">Avatar URL:</label><br />
-      <input type="url" id="avatar" name="avatar" /><br /><br />
-
-      <label for="mediaAlt">Media Alt Text:</label>
-      <input type="text" id="mediaAlt" name="mediaAlt" placeholder="Optional" />
-
-      <label for="banner">Banner URL:</label><br />
-      <input type="url" id="banner" name="banner" /><br /><br />
-
-      <label for="mediaAlt">Media Alt Text:</label>
-      <input type="text" id="mediaAlt" name="mediaAlt" placeholder="Optional" />
-
-      <button type="submit">Update Profile</button>
-    </form>
+ <!-------------------------- update profile----------------------------------------------------- -->
+    <div class="update-container">
+      <h1>Update Profile</h1>
+      <form id="updateProfileForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+  
+        <label for="avatar">Avatar URL:</label>
+        <input type="url" id="avatar" name="avatar" placeholder="Enter avatar URL" />
+  
+        <label for="banner">Banner URL:</label>
+        <input type="url" id="banner" name="banner" placeholder="Enter banner URL" />
+  
+        <label for="mediaAlt">Media Alt Text:</label>
+        <input type="text" id="mediaAlt" name="mediaAlt" placeholder="Optional" />
+  
+        <button type="submit">Update Profile</button>
+      </form>
+    </div>
+  </main>
   </body>
 </html>

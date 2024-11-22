@@ -705,3 +705,67 @@ div > div {
 }
 
 
+/* --------------------------update profile -------------------------------------------------*/
+
+.update-container {
+  width: 100%;
+  max-width: 400px; /* Form's max width */
+  background-color: rgba(0, 0, 0, 0.7); /* White background for the form */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+}
+
+/* Form Title */
+.profile-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color:white; /* Dark gray text color */
+}
+
+/* Form Styling */
+#updateProfileForm {
+  display: flex;
+  flex-direction: column; /* Stack the form elements */
+  gap: 15px; /* Space between form elements */
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555; /* Medium gray label color */
+  text-align: left;
+}
+
+/* Input Fields */
+input {
+  width: 100%; /* Full width */
+  padding: 10px; /* Add padding for better user experience */
+  font-size: 14px;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  outline: none; /* Remove default outline */
+}
+
+input:focus {
+  border-color: #007BFF; /* Highlight border on focus */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3); /* Subtle glow effect */
+}
+
+/* Submit Button */
+button {
+  padding: 10px 15px; /* Add padding to the button */
+  background-color: #007BFF; /* Blue background */
+  color: white; /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

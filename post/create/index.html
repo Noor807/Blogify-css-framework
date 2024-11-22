@@ -1,67 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Blog post</title>
+    <link rel="stylesheet" href="../../src/css/style.css" />
+    <script type="module" src="/src/app.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Create Blog post</title>
-  <link rel="stylesheet" href="../../src/css/style.css" />
-  <script type="module" src="/src/app.js"></script>
-</head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a href="/"
+          ><img class="logo" src="/images/blogify.png" alt="noroff logo"
+        /></a>
+        <ul>
+          <li>
+            <a href="/profile/">My Profile</a>
+            <a href="/post/create/">Create post</a>
+            <a href="/auth/register/">Register</a>
+            <button id="logout-Btn" type="button">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <h1 class="create-heading">Create Blog Post:</h1>
 
-<body>
-  <header>
-    <div class="navbar">
-      <a href="/"><img class="logo" src="/images/blogify.png" alt="noroff logo" /></a>
-      <ul>
-        <li>
-          <a href="/profile/">My Profile</a>
-          <a href="/post/create/">Create post</a>
-          <a href="/auth/register/">Register</a> 
-          <button id="logout-Btn" type="button">Logout</button>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <main>
+      <div class="create-blog">
+        <form id="create-blog-form" name="createPost">
+          <input type="hidden" id="blogId" name="blogId" />
 
-    <h1 class="create-heading">Create Blog Post:</h1>
+          <label for="title">Title:</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter a title here..."
+            required
+          />
 
-    <div class="create-blog">
-      <form id="create-blog-form" name="createPost">
-        <input type="hidden" id="blogId" name="blogId" />
+          <label for="body">Body:</label>
+          <textarea
+            id="body"
+            name="body"
+            placeholder="Editor body goes here..."
+            maxlength="280"
+          ></textarea>
 
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" placeholder="Enter a title here..." required />
+          <label for="tags">tags</label>
+          <input type="text" id="tags" name="tags" />
 
-        <label for="body">Body:</label>
-        <textarea id="body" name="body" placeholder="Editor body goes here..." maxlength="280"></textarea>
+          <label for="mediaUrl">Media URL:</label>
 
-        <label for="tags">tags</label>
-        <input type="text" id="tags" name="tags">
+          <input
+            type="text"
+            id="mediaUrl"
+            name="mediaUrl"
+            placeholder="Optional"
+          />
 
+          <label for="mediaAlt">Media Alt Text:</label>
+          <input
+            type="text"
+            id="mediaAlt"
+            name="mediaAlt"
+            placeholder="Optional"
+          />
 
-        <label for="mediaUrl">Media URL:</label>
-
-        <input type="text" id="mediaUrl" name="mediaUrl" placeholder="Optional" />
-
-        <label for="mediaAlt">Media Alt Text:</label>
-        <input type="text" id="mediaAlt" name="mediaAlt" placeholder="Optional" />
-
-        
-        <button type="submit" class="submit">Create post</button>
-      </form>
-
-    </div>
-  </main>
-
-  <!-- <h1>Create Post</h1>
-
-    <form name="createPost">
-      <button>Create Post</button>
-    </form> -->
-</body>
-
+          <button type="submit" class="submit">Create post</button>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
 
 <!-- <div class="tag-container">
