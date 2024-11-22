@@ -12,10 +12,6 @@
   --brown: #A06204;
 }
 
-body {
-  background-color: var(--light-blue);
-}
-
 button {
   background-color: var(--golden-yellow);
   color: var(--brown);
@@ -33,7 +29,6 @@ a {
 }
 
 
-
 body {
   font-family: "Open Sans", sans-serif;
   background-color: white;
@@ -46,11 +41,14 @@ h3,
 a {
   font-family: "Merriweather", serif;
 }
+.para {
+  color: white;
+}
 /* General Navbar Styling */
 
  .a-btn {
   font-family: sans-serif;
-  color:var(--brown);
+  color:rgb(241, 241, 74);
   font-size: 600;
   text-decoration: none;
 }
@@ -152,7 +150,7 @@ body {
 }
 
 .form-container {
-  height: 800px;
+  height: 700px;
   width: 100%;
   max-width: 1000px;
   background-color:  var(--light-blue);
@@ -168,9 +166,10 @@ body {
 #login-form {
   width: 100%;
   max-width: 500px;
-  height: 400px;
+  height: 350px;
   padding: 20px;
-  background-color: rgb(255, 255, 255);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -179,10 +178,10 @@ body {
   justify-content: center;
   width: 100%;
   max-width: 500px;
-  height: 500px;
+  height: 450px;
   align-items: center;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(44, 41, 41, 0.4);
@@ -191,7 +190,8 @@ body {
 
 form label {
   display: block;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+  color: white;
   margin-bottom: 5px;
   font-weight: bold;
 }
@@ -213,28 +213,27 @@ form input[type="password"]:focus {
   outline: none;
 }
 
-.login-btn {
+#login-btn {
   background-color: var(--brown); 
   color: #fff;
   font-size: 16px; 
   font-weight: bold; 
   border: none; 
+  margin-top: 1rem;
   border-radius: 5px; 
-  padding: 10px 30px; 
+  padding: 8px 40px;
+  width: 100%;
+  max-width: 500px; 
   cursor: pointer;
   transition: all 0.3s ease; 
 }
 
 /* Hover effect */
-.login-btn:hover {
+#login-btn:hover {
   background-color: #0056b3; 
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
-
-
-/*------------------------Registration form--------------------*/
-/* Basic Reset */
 
 /*----------------create blog post---------------------------------*/
 /*------------------------------------------------------------------------
