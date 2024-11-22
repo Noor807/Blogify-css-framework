@@ -1,17 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
     <script type="module" src="/src/app.js"></script>
   </head>
   <body>
-    <h1>Profile</h1>
+    <div class="profile-container">
+      <!-- Background Section -->
+      <div class="profile-background">
+        <!-- Profile Card -->
+        <div class="profile-card">
+          <img class="avatar" src="https://media.istockphoto.com/id/1360062763/vector/golden-glitter-and-sparkles-in-sun-rays-background-yellow-lines-in-shiny-light-vector.jpg?s=1024x1024&w=is&k=20&c=OO7Gimx7cxXOkhP9H8XGAUiUgqJ6tCzie4gUsRcb7io=" alt="User Avatar">
+          <h2 class="username">haniah123</h2>
+          <a href="#" class="edit-profile-link">edit profile</a>
+        </div>
+        <!-- Stats Section -->
+        <div class="stats-bar">
+          <span>Followers: <strong>1</strong></span>
+          <span>Following: <strong>2</strong></span>
+          <span>Posts: <strong>7</strong></span>
+        </div>
+      </div>
+  
+      <!-- Bio Section -->
+      <div class="bio-section">
+        <h3>Bio:</h3>
+        <p>FED(OCT23)</p>
+      </div>
+    </div>
 
-    <form name="updateProfile">
-      <button>Update Profile</button>
+      <!------------------------------ Posts Section ------------------------------------->
+      <section class="posts-section">
+        <h3 class="section-title">Posts</h3>
+        <div class="posts-grid">
+          <div class="post-item">
+            <img src="https://url.com/post-image1.jpg" alt="Post 1" />
+          </div>
+          <div class="post-item">
+            <img src="https://url.com/post-image2.jpg" alt="Post 2" />
+          </div>
+          <div class="post-item">
+            <img src="https://url.com/post-image3.jpg" alt="Post 3" />
+          </div>
+          <div class="post-item">
+            <img src="https://url.com/post-image4.jpg" alt="Post 4" />
+          </div>
+          <div class="post-item">
+            <img src="https://url.com/post-image5.jpg" alt="Post 5" />
+          </div>
+          <!-- Add more post-item blocks as needed -->
+        </div>
+      </section>
+    </div>
+
+
+    <h1>Update Profile</h1>
+    <form id="updateProfileForm">
+      <label for="username">Username:</label><br />
+      <input type="text" id="username" name="username" required /><br /><br />
+
+      <label for="avatar">Avatar URL:</label><br />
+      <input type="url" id="avatar" name="avatar" /><br /><br />
+
+      <label for="mediaAlt">Media Alt Text:</label>
+      <input type="text" id="mediaAlt" name="mediaAlt" placeholder="Optional" />
+
+      <label for="banner">Banner URL:</label><br />
+      <input type="url" id="banner" name="banner" /><br /><br />
+
+      <label for="mediaAlt">Media Alt Text:</label>
+      <input type="text" id="mediaAlt" name="mediaAlt" placeholder="Optional" />
+
+      <button type="submit">Update Profile</button>
     </form>
   </body>
 </html>
