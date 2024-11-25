@@ -11,6 +11,19 @@
   --golden-yellow: #E0A030;
   --brown: #A06204;
 }
+body {
+  font-family: " Arial", sans-serif;
+  background-color: white;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+a {
+  font-family: "Merriweather", serif;
+  color: var(--blue);
+}
 
 button {
   background-color: var(--golden-yellow);
@@ -24,42 +37,17 @@ button {
   transition: background-color 0.3s ease;
 }
 
-a {
-  color: var(--blue);
-}
-
-
-body {
-  font-family: "Open Sans", sans-serif;
-  background-color: white;
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-a {
-  font-family: "Merriweather", serif;
-}
 .para {
   color: white;
 }
-/* General Navbar Styling */
 
- .a-btn {
+.a-btn {
   font-family: sans-serif;
   color:rgb(241, 241, 74);
   font-size: 600;
   text-decoration: none;
 }
 
-/* General styling */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-/* Navbar styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -69,7 +57,6 @@ body {
   color: white;
 }
 
-/* Logo styling */
 .navbar .logo {
   height:80px;
   width: 100%;
@@ -79,8 +66,6 @@ body {
 
 }
 
-
-/* Navigation links styling */
 .navbar ul {
   list-style: none;
   margin: 0;
@@ -108,7 +93,6 @@ body {
   border-radius: 5px;
 }
 
-/* Logout button styling */
 #logout-Btn {
   background-color: #A06204;
   color: white;
@@ -121,10 +105,10 @@ body {
 }
 
 #logout-Btn:hover {
-  background-color: #E0A030; /* Hover color */
+  background-color: #E0A030; 
 }
 
-/*--------------------login form-----------------------------*/
+/*--------------------------------------login form-------------------------------------------*/
 
 .login-main {
   display: flex;
@@ -228,7 +212,6 @@ form input[type="password"]:focus {
   transition: all 0.3s ease; 
 }
 
-/* Hover effect */
 #login-btn:hover {
   background-color: #0056b3; 
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
@@ -236,10 +219,8 @@ form input[type="password"]:focus {
 
 
 /*----------------create blog post---------------------------------*/
-/*------------------------------------------------------------------------
+/*------------------------------------------------------------------------*/
 
-
-/* Main Container */
 main {
   margin: 0 auto;
   padding: 20px;
@@ -248,7 +229,6 @@ main {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Heading */
 .create-heading {
   font-size: 2em;
   margin: 0 auto;
@@ -270,14 +250,12 @@ main {
   flex-direction: column;
 }
 
-/* Labels */
 label {
   margin-bottom: 5px;
   font-weight: bold;
   color: #555;
 }
 
-/* Inputs and Textarea */
 input[type="text"],
 textarea {
   padding: 10px;
@@ -293,7 +271,6 @@ textarea:focus {
   outline: none;
 }
 
-/* Submit Button */
 .submit {
   padding: 10px;
   background-color: var(--brown);
@@ -309,7 +286,6 @@ textarea:focus {
   background-color:lightsalmon;
 }
 
-/* Optional Media Fields */
 input[type="text"][placeholder="Optional"] {
   font-style: italic;
   color: #888;
@@ -351,10 +327,8 @@ input[type="text"][placeholder="Optional"] {
   cursor: not-allowed; 
 }
 
-/*------------------------blogContainer.----------------------------
-/*_----------------------------------------------------------------------------
-
-  /* Container for all blog posts */
+/*------------------------blogContainer.---------------------------------------
+/*_----------------------------------------------------------------------------*/
 
 .blog-section {
   max-width: 1200px;
@@ -363,7 +337,6 @@ input[type="text"][placeholder="Optional"] {
   font-family: Arial, sans-serif;
 }
 
-/* Blog Section Heading */
 .create-heading {
   font-size: 2em;
   color: #333;
@@ -371,7 +344,6 @@ input[type="text"][placeholder="Optional"] {
   margin-bottom: 25px;
 }
 
-/* Blog Container Styling */
 #blogContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
@@ -380,7 +352,6 @@ input[type="text"][placeholder="Optional"] {
   width: 100%;
 }
 
-/* Individual Blog Post Styling */
 .blog-dev {
   display: block;
   background-color: #ffffff;
@@ -398,7 +369,6 @@ input[type="text"][placeholder="Optional"] {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
 }
 
-/* Blog Post Image Styling */
 .blog-dev img {
   width: 100%;
   height: 200px; 
@@ -406,12 +376,10 @@ input[type="text"][placeholder="Optional"] {
   
 }
 
-/* Blog Post Content Styling */
 .blog-dev div {
   padding: 20px; 
 }
 
-/* Blog Post Title */
 .title {
   font-size: 1.4em; 
   color: #333;
@@ -419,28 +387,24 @@ input[type="text"][placeholder="Optional"] {
   font-weight: bold;
 }
 
-/* Blog Post Author */
 .author {
   font-size: 0.9em;
   color: #666;
   margin-bottom: 8px;
 }
 
-/* Blog Post Created Date */
 .created {
   font-size: 0.8em;
   color: #999;
   margin-bottom: 8px;
 }
 
-/* Blog Post Tags */
 .tags {
   font-size: 0.9em;
   color: #007bff;
   font-style: italic;
 }
 
-/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   #blogContainer {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
@@ -448,10 +412,9 @@ input[type="text"][placeholder="Optional"] {
   }
 }
 
-/*-------------------------single blog post---------------------------------
-/*-----------------------------------------------------------------------------------------
+/*-------------------------single blog post-----------------------------------------------
+/*-----------------------------------------------------------------------------------------*/
 
-/* Blog Brief Styling */
 .blog-brief {
   max-width: 800px;
   margin: 0 auto;
@@ -489,8 +452,6 @@ img {
   margin-top: 20px;
 }
 
-
-/* Specific styling for Edit Button */
 .edit-btn {
   background-color: var(--brown); 
   color: #fff; 
@@ -507,7 +468,6 @@ img {
   transform: scale(0.98); 
 }
 
-/* Specific styling for Delete Button */
 .del-btn {
   background-color:burlywood; 
   color:black; 
@@ -522,42 +482,29 @@ img {
   transform: scale(0.98); 
 }
 
-
-/* Example of showing admin buttons (if needed dynamically) */
 .show-admin .admin-hidden {
   display: inline-block; 
 }
 
-
-
-/*.admin-hidden {
-    display: none; /* Adjust this with JavaScript to show for admin users 
-  }*/
-
-/* Author and Date Styling */
 .author,
 .date {
   font-size: 0.9em;
   color: #888;
 }
 
-/* Content Styling */
 div > div {
   line-height: 1.6;
   color: #333;
   margin-top: 20px;
 }
 
-/*--------------------Profile page------------------------------------------*/
-
-
+/*-------------------------Profile page------------------------------------------*/
 
 .profile-container {
   text-align: center;
   padding: 0;
 }
 
-/* Background Section */
 .profile-background {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://media.istockphoto.com/id/1360062763/vector/golden-glitter-and-sparkles-in-sun-rays-background-yellow-lines-in-shiny-light-vector.jpg?s=1024x1024&w=is&k=20&c=OO7Gimx7cxXOkhP9H8XGAUiUgqJ6tCzie4gUsRcb7io=') center/cover no-repeat;
   color: white;
@@ -566,7 +513,6 @@ div > div {
   
 }
 
-/* Profile Card */
 .profile-card {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
@@ -616,8 +562,6 @@ div > div {
   transform: translateY(0); 
 }
 
-
-/* Stats Bar */
 .stats-bar {
   display: flex;
   justify-content: center;
@@ -633,7 +577,6 @@ div > div {
   font-size: 14px;
 }
 
-/* Bio Section */
 .bio-section {
   background-color: white;
   margin: 20px auto;
@@ -654,7 +597,6 @@ div > div {
   color: #555;
 }
 
-
 /* --------------------------Posts Section -------------------------------------------------*/
 .posts-section {
   margin: 20px 0;
@@ -672,14 +614,12 @@ div > div {
   font-weight: bold;
 }
 
-/* Posts Grid */
 .posts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 15px;
 }
 
-/* Post Item */
 .post-item {
   overflow: hidden;
   border-radius: 10px;
@@ -709,63 +649,60 @@ div > div {
 
 .update-container {
   width: 100%;
-  max-width: 400px; /* Form's max width */
-  background-color: rgba(0, 0, 0, 0.7); /* White background for the form */
+  max-width: 400px; 
+  background-color: rgba(0, 0, 0, 0.7); 
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   text-align: center;
 }
 
-/* Form Title */
 .profile-container h1 {
   font-size: 24px;
   margin-bottom: 20px;
-  color:white; /* Dark gray text color */
+  color:white; 
 }
 
-/* Form Styling */
 #updateProfileForm {
   display: flex;
-  flex-direction: column; /* Stack the form elements */
-  gap: 15px; /* Space between form elements */
+  flex-direction: column; 
+  gap: 15px; 
 }
 
 label {
   font-size: 14px;
   font-weight: bold;
-  color: #555; /* Medium gray label color */
+  color: #555; 
   text-align: left;
 }
 
-/* Input Fields */
+
 input {
-  width: 100%; /* Full width */
-  padding: 10px; /* Add padding for better user experience */
+  width: 100%; 
+  padding: 10px; 
   font-size: 14px;
-  border: 1px solid #ddd; /* Light border */
-  border-radius: 5px; /* Rounded corners */
-  outline: none; /* Remove default outline */
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  outline: none; 
 }
 
 input:focus {
-  border-color: #007BFF; /* Highlight border on focus */
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3); /* Subtle glow effect */
+  border-color: #007BFF;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3); 
 }
 
-/* Submit Button */
 button {
-  padding: 10px 15px; /* Add padding to the button */
-  background-color: #007BFF; /* Blue background */
-  color: white; /* White text */
+  padding: 10px 15px; 
+  background-color: #007BFF; 
+  color: white; 
   font-size: 16px;
   font-weight: bold;
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
+  border: none; 
+  border-radius: 5px; 
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth hover effect */
+  transition: all 0.3s ease; 
 }
 
 button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3; 
 }
