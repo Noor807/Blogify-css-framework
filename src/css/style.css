@@ -12,7 +12,7 @@
   --brown: #A06204;
 }
 body {
-  font-family: " Arial", sans-serif;
+  font-family: " Merriweather", sans-serif;
   background-color: white;
   margin: 0;
 }
@@ -21,7 +21,6 @@ h1,
 h2,
 h3,
 a {
-  font-family: "Merriweather", serif;
   color: var(--blue);
 }
 
