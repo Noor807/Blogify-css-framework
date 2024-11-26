@@ -6,10 +6,10 @@
   box-sizing: border-box;
 }
 :root {
-  --light-blue: #C8F4F9;
-  --blue: #1592B4;
-  --golden-yellow: #E0A030;
-  --brown: #A06204;
+  --light-blue: #c8f4f9;
+  --blue: #1592b4;
+  --golden-yellow: #e0a030;
+  --brown: #a06204;
 }
 body {
   font-family: " Merriweather", sans-serif;
@@ -27,7 +27,7 @@ a {
 button {
   background-color: var(--golden-yellow);
   color: var(--brown);
-  color:black;
+  color: black;
   border: none;
   border-radius: 5px;
   padding: 8px 10px;
@@ -42,7 +42,7 @@ button {
 
 .a-btn {
   font-family: sans-serif;
-  color:rgb(241, 241, 74);
+  color: rgb(241, 241, 74);
   font-size: 600;
   text-decoration: none;
 }
@@ -52,17 +52,16 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #1592B4; 
+  background-color: #1592b4;
   color: white;
 }
 
 .navbar .logo {
-  height:80px;
+  height: 80px;
   width: 100%;
   max-width: 200px;
   display: flex;
   align-items: center;
-
 }
 
 .navbar ul {
@@ -75,7 +74,7 @@ button {
 
 .navbar ul li {
   display: flex;
-  gap: 5px; 
+  gap: 5px;
   align-items: center;
 }
 
@@ -88,12 +87,12 @@ button {
 }
 
 .navbar ul li a:hover {
-  background-color: #E0A030; 
+  background-color: #e0a030;
   border-radius: 5px;
 }
 
 #logout-Btn {
-  background-color: #A06204;
+  background-color: #a06204;
   color: white;
   border: none;
   border-radius: 5px;
@@ -104,7 +103,7 @@ button {
 }
 
 #logout-Btn:hover {
-  background-color: #E0A030; 
+  background-color: #e0a030;
 }
 
 /*--------------------------------------login form-------------------------------------------*/
@@ -136,7 +135,7 @@ button {
   height: 700px;
   width: 100%;
   max-width: 1000px;
-  background-color:  var(--light-blue);
+  background-color: var(--light-blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,7 +173,7 @@ button {
 form label {
   display: block;
   margin-top: 1rem;
-  color:white;
+  color: white;
   margin-bottom: 5px;
   font-weight: bold;
 }
@@ -197,25 +196,24 @@ form input[type="password"]:focus {
 }
 
 #login-btn {
-  background-color: var(--brown); 
+  background-color: var(--brown);
   color: #fff;
-  font-size: 16px; 
-  font-weight: bold; 
-  border: none; 
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
   margin-top: 1rem;
-  border-radius: 5px; 
+  border-radius: 5px;
   padding: 8px 40px;
   width: 100%;
-  max-width: 500px; 
+  max-width: 500px;
   cursor: pointer;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
 #login-btn:hover {
-  background-color: #E0A030; 
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+  background-color: #e0a030;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
-
 
 /*------------------------create blog post-------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------*/
@@ -239,11 +237,11 @@ main {
 .create-blog {
   max-width: 600px;
   margin: 80px auto;
-  padding: 20px; 
-  background-color: #fff; 
-  border: 2px solid #E0A030;
-  border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #e0a030;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 #create-blog-form {
   display: flex;
@@ -283,7 +281,7 @@ textarea:focus {
 }
 
 .submit:hover {
-  background-color: #E0A030;
+  background-color: #e0a030;
 }
 
 input[type="text"][placeholder="Optional"] {
@@ -291,40 +289,40 @@ input[type="text"][placeholder="Optional"] {
   color: #888;
 }
 /*--------------------------carousel-btn------------------------------------------------------------*/
-.carousel-btn{
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  margin-top: 20px; 
-  gap:50px; 
+.carousel-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 50px;
 }
 
 .carousel-btn button {
-  background-color: var(--brown); 
-  color: white; 
-  border: none; 
-  border-radius: 5px; 
-  padding:10px 20px; 
-  font-size: 16px; 
-  font-weight: bold; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease, transform 0.2s ease; 
+  background-color: var(--brown);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .carousel-btn button:hover {
-  background-color:  #E0A030; 
-  transform: scale(1.05); 
+  background-color: #e0a030;
+  transform: scale(1.05);
 }
 
 .carousel-btn button:active {
-  background-color:rgb(234, 234, 123); 
-  transform: scale(0.95); 
+  background-color: rgb(234, 234, 123);
+  transform: scale(0.95);
 }
 
 .carousel-btn button:disabled {
   background-color: #d3d3d3;
-  color: #666666; 
-  cursor: not-allowed; 
+  color: #666666;
+  cursor: not-allowed;
 }
 
 /*------------------------blogContainer.---------------------------------------
@@ -346,7 +344,7 @@ input[type="text"][placeholder="Optional"] {
 
 #blogContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
   padding: 20px;
   width: 100%;
@@ -355,8 +353,8 @@ input[type="text"][placeholder="Optional"] {
 .blog-dev {
   display: block;
   background-color: #ffffff;
-  border-radius: 10px; 
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); 
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
   text-decoration: none;
   border: 1px solid grey;
   color: inherit;
@@ -365,23 +363,22 @@ input[type="text"][placeholder="Optional"] {
 }
 
 .blog-dev:hover {
-  transform: translateY(-8px); 
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .blog-dev img {
   width: 100%;
-  height: 200px; 
+  height: 200px;
   object-fit: cover;
-  
 }
 
 .blog-dev div {
-  padding: 20px; 
+  padding: 20px;
 }
 
 .title {
-  font-size: 1.4em; 
+  font-size: 1.4em;
   color: #333;
   margin: 10px 0;
   font-weight: bold;
@@ -407,8 +404,8 @@ input[type="text"][placeholder="Optional"] {
 
 @media (max-width: 768px) {
   #blogContainer {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-    gap: 20px; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
   }
 }
 
@@ -421,7 +418,7 @@ input[type="text"][placeholder="Optional"] {
   margin-top: 50px;
   padding: 20px;
   font-family: Arial, sans-serif;
-  border: 3px solid  #E0A030;
+  border: 3px solid #e0a030;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0px 4px 8px #E0A030(0, 0, 0, 0.1);
@@ -429,7 +426,6 @@ input[type="text"][placeholder="Optional"] {
 
 #singlePostContainer {
   padding: 20px;
-  
 }
 
 h1 {
@@ -453,37 +449,36 @@ img {
 }
 
 .edit-btn {
-  background-color: var(--brown); 
-  color: #fff; 
-  margin-right: 10px; 
-
+  background-color: var(--brown);
+  color: #fff;
+  margin-right: 10px;
 }
 
 .edit-btn:hover {
-  background-color: lightsalmon; 
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+  background-color: lightsalmon;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .edit-btn:active {
-  transform: scale(0.98); 
+  transform: scale(0.98);
 }
 
 .del-btn {
-  background-color:burlywood; 
-  color:black; 
+  background-color: burlywood;
+  color: black;
 }
 
 .del-btn:hover {
-  background-color: lightsalmon; 
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+  background-color: lightsalmon;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .del-btn:active {
-  transform: scale(0.98); 
+  transform: scale(0.98);
 }
 
 .show-admin .admin-hidden {
-  display: inline-block; 
+  display: inline-block;
 }
 
 .author,
@@ -506,11 +501,11 @@ div > div {
 }
 
 .profile-background {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://media.istockphoto.com/id/1360062763/vector/golden-glitter-and-sparkles-in-sun-rays-background-yellow-lines-in-shiny-light-vector.jpg?s=1024x1024&w=is&k=20&c=OO7Gimx7cxXOkhP9H8XGAUiUgqJ6tCzie4gUsRcb7io=') center/cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url("https://media.istockphoto.com/id/1360062763/vector/golden-glitter-and-sparkles-in-sun-rays-background-yellow-lines-in-shiny-light-vector.jpg?s=1024x1024&w=is&k=20&c=OO7Gimx7cxXOkhP9H8XGAUiUgqJ6tCzie4gUsRcb7io=")
+      center/cover no-repeat;
   color: white;
   padding: 50px 20px 20px;
- 
-  
 }
 
 .profile-card {
@@ -541,25 +536,25 @@ div > div {
 
 .edit-profile-link {
   display: inline-block;
-  background-color: rgb(139, 125, 43); 
-  color: rgb(16, 15, 15); 
-  font-size: 12px; 
-  padding: 3px 8px; 
-  border-radius: 5px; 
-  text-decoration: none; 
-  font-weight: bold; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-  transition: background-color 0.3s, transform 0.2s; 
+  background-color: rgb(139, 125, 43);
+  color: rgb(16, 15, 15);
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .edit-profile-link:hover {
-  background-color:var(--golden-yellow); 
-  transform: translateY(-2px); 
+  background-color: var(--golden-yellow);
+  transform: translateY(-2px);
 }
 
 .edit-profile-link:active {
-  background-color: goldenrod; 
-  transform: translateY(0); 
+  background-color: goldenrod;
+  transform: translateY(0);
 }
 
 .stats-bar {
@@ -644,50 +639,47 @@ div > div {
   transform: scale(1.05);
 }
 
-
 /* --------------------------update profile -------------------------------------------------*/
 
-/* .update-container {
+.update-container {
   width: 100%;
-  max-width: 400px; 
-  background-color: rgba(0, 0, 0, 0.7); 
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .profile-container h1 {
   font-size: 24px;
   margin-bottom: 20px;
-  color:white; 
+  color: white;
 }
 
 #updateProfileForm {
   display: flex;
-  flex-direction: column; 
-  gap: 15px; 
+  flex-direction: column;
+  gap: 15px;
 }
 
 label {
   font-size: 14px;
   font-weight: bold;
-  color: #555; 
+  color: #555;
   text-align: left;
 }
 
-
 input {
-  width: 100%; 
-  padding: 10px; 
+  width: 100%;
+  padding: 10px;
   font-size: 14px;
-  border: 1px solid #ddd; 
-  border-radius: 5px; 
-  outline: none; 
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
 }
 
 input:focus {
-  border-color: #007BFF;
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3); 
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
 }
- */
