@@ -3,7 +3,6 @@ import { readPost } from "../../api/post/read";
 export async function RenderSinglePost(postId) {
   try {
     const data = await readPost(postId);
-    console.log(data);
 
     const postContainer = document.querySelector("#singlePostContainer");
     if (!postContainer) {

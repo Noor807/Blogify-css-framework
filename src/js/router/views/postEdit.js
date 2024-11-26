@@ -10,7 +10,6 @@ authGuard();
 const urlSearch = new URLSearchParams(window.location.search);
 const postId = urlSearch.get("post");
 const response = await readPost(postId);
-console.log(response);
 
 populateInputForm(response);
 

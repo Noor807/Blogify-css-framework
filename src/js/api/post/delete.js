@@ -31,7 +31,6 @@ export async function deletePost(id) {
       throw new Error(errorData.message || "Failed to delete the post");
     }
 
-    console.log("Post deleted successfully");
     return { success: true, message: "Post deleted successfully" };
   } catch (error) {
     console.error("Error deleting the post:", error);

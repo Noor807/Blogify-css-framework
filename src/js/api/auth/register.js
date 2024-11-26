@@ -46,7 +46,7 @@ export async function register({ name, email, password }) {
     }
 
     const data = await response.json();
-    console.log("Registration successful:", data);
+
     return data;
   } catch (error) {
     console.error("Error during registration:", error);

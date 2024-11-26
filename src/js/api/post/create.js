@@ -31,7 +31,6 @@ export async function createBlogPost({ title, body, tags, media }) {
     media,
   };
 
-  console.log(headersObject);
   const response = await fetch(API_SOCIAL_POSTS, {
     method: "POST",
     headers: headersObject,

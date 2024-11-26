@@ -4,7 +4,6 @@ import { onDeletePost } from "../../ui/post/delete";
 setLogoutListener();
 const urlSearch = new URLSearchParams(window.location.search);
 const postId = urlSearch.get("post");
-console.log(postId);
 RenderSinglePost(postId);
 
 const delButton = document.querySelector(".del-btn");

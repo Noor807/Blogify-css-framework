@@ -3,7 +3,6 @@
  */
 
 export function onLogout() {
-  console.log("Logging out...");
 
   localStorage.removeItem("token");
   localStorage.removeItem("apiKey");
