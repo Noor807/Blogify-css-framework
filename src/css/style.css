@@ -212,7 +212,7 @@ form input[type="password"]:focus {
 }
 
 #login-btn:hover {
-  background-color:yellow; 
+  background-color:rgb(241, 241, 74);; 
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
@@ -231,13 +231,14 @@ main {
 .create-heading {
   font-size: 2em;
   margin: 0 auto;
+  margin-top: 2rem;
   text-align: center;
   color: #333;
 }
 
 .create-blog {
   max-width: 600px;
-  margin: 100px auto;
+  margin: 80px auto;
   padding: 20px; 
   background-color: #fff; 
   border: 2px solid #E0A030;
@@ -311,7 +312,7 @@ input[type="text"][placeholder="Optional"] {
 }
 
 .carousel-btn button:hover {
-  background-color: (rgb(233, 233, 39)); 
+  background-color: rgb(241, 241, 74);; 
   transform: scale(1.05); 
 }
 
