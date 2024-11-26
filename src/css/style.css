@@ -316,7 +316,7 @@ input[type="text"][placeholder="Optional"] {
 }
 
 .carousel-btn button:active {
-  background-color: #003f7f; 
+  background-color:rgb(234, 234, 123); 
   transform: scale(0.95); 
 }
 
