@@ -22,7 +22,7 @@ export async function RenderSinglePost(postId) {
 
     const dateElement = document.createElement("p");
     dateElement.textContent = `Published: ${
-      data.data.created || "Date unknown"
+      data.data.created.slice(0,10) || "Date unknown"
     }`;
 
     const contentElement = document.createElement("div");
