@@ -17,26 +17,24 @@ if (token) {
   headersObject.append("Authorization", `Bearer ${token}`);
 }
 export async function deletePost(id) {
-    const API_URL = `${API_SOCIAL_POSTS}/${id}`; // Replace with your actual API endpoint
-   
+  const API_URL = `${API_SOCIAL_POSTS}/${id}`;
 
-    try {
-        const response = await fetch(API_URL, {
-            method: 'DELETE',
-            headers: headersObject,
-        });
+  try {
+    const response = await fetch(API_URL, {
+      method: "DELETE",
+      headers: headersObject,
+    });
 
-        if (!response.ok) {
-            // Handle different types of errors if needed
-            const errorData = await response.json();
-            console.error("Failed to delete the post:", errorData);
-            throw new Error(errorData.message || "Failed to delete the post");
-        }
-
-        console.log("Post deleted successfully");
-        return { success: true, message: "Post deleted successfully" };
-    } catch (error) {
-        console.error("Error deleting the post:", error);
-        return { success: false, error: error.message };
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error("Failed to delete the post:", errorData);
+      throw new Error(errorData.message || "Failed to delete the post");
     }
+
+    console.log("Post deleted successfully");
+    return { success: true, message: "Post deleted successfully" };
+  } catch (error) {
+    console.error("Error deleting the post:", error);
+    return { success: false, error: error.message };
+  }
 }

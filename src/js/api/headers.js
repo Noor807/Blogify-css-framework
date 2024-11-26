@@ -1,6 +1,5 @@
 import { API_KEY } from "./constants";
 
-
 export function headers() {
   const headers = new Headers();
 
@@ -10,6 +9,3 @@ export function headers() {
 
   return headers;
 }
-
-
-

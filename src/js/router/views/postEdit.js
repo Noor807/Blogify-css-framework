@@ -4,24 +4,16 @@ import { onUpdatePost } from "../../ui/post/update";
 import { authGuard } from "../../utilities/authGuard";
 import { populateInputForm } from "../../utilities/populateInputForm";
 
-setLogoutListener()
-
+setLogoutListener();
 
 authGuard();
 const urlSearch = new URLSearchParams(window.location.search);
 const postId = urlSearch.get("post");
-const response = await readPost(postId)
+const response = await readPost(postId);
 console.log(response);
 
-populateInputForm(response)
+populateInputForm(response);
 
 const form = document.forms.editPost;
 
-form.addEventListener('submit' , onUpdatePost)
-
-
-
-
-
-
-
+form.addEventListener("submit", onUpdatePost);

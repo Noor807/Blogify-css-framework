@@ -46,5 +46,5 @@ export async function createBlogPost({ title, body, tags, media }) {
   }
 
   const result = await response.json();
-  return result; // Return the created blog post
+  return result;
 }

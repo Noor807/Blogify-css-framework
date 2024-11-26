@@ -2,18 +2,15 @@ import { readPost } from "../../api/post/read";
 
 export async function RenderSinglePost(postId) {
   try {
-    // Fetch the post data using `readPost`
     const data = await readPost(postId);
     console.log(data);
 
-    // Select the container where the post will be displayed
     const postContainer = document.querySelector("#singlePostContainer");
     if (!postContainer) {
       console.error('No element with id "singlePostContainer" found.');
       return;
     }
 
-    // Create and append post content
     const titleElement = document.createElement("h1");
     titleElement.textContent = data.data.title;
 
@@ -22,7 +19,7 @@ export async function RenderSinglePost(postId) {
 
     const dateElement = document.createElement("p");
     dateElement.textContent = `Published: ${
-      data.data.created.slice(0,10) || "Date unknown"
+      data.data.created.slice(0, 10) || "Date unknown"
     }`;
 
     const contentElement = document.createElement("div");
@@ -32,7 +29,6 @@ export async function RenderSinglePost(postId) {
     imageElement.src = data.data.media?.url || "";
     imageElement.alt = data.data.media?.alt || "Blog image";
 
-    // Append elements to the post container
     postContainer.appendChild(titleElement);
     postContainer.appendChild(authorElement);
     postContainer.appendChild(dateElement);

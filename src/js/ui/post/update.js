@@ -1,12 +1,10 @@
-import { updatePost } from "../../api/post/update";
-
 /**
  * Passes data to the createPost function in api/post and handles the response
  */
+import { updatePost } from "../../api/post/update";
 export async function onUpdatePost(e) {
-  e.preventDefault(); // Prevent the form from submitting the traditional way
+  e.preventDefault();
 
-  // Get values from the form
   const id = e.target.id.value.trim();
   const title = e.target.title.value.trim();
   const body = e.target.body.value.trim();
@@ -30,15 +28,11 @@ export async function onUpdatePost(e) {
     const response = await updatePost(id, { title, body, tags, media });
     if (response) {
       alert("post is updated successfully");
-      window.location.href = `/post/?post=${id}`
+      window.location.href = `/post/?post=${id}`;
     } else {
       alert("error updating");
     }
   } catch (error) {
     console.error("update error", error);
   }
-  
-
 }
-
-

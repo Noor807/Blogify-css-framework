@@ -1,7 +1,6 @@
 import { API_SOCIAL_POSTS, API_SOCIAL_PROFILES } from "../constants";
 import { headers } from "../headers";
 
-    
 /**
  * Reads a single post by its ID.
  *
@@ -20,25 +19,24 @@ if (token) {
 }
 
 export async function readPost(id) {
-    try {
-      const response = await fetch(`${API_SOCIAL_POSTS}/${id}?_author=true`, {
-        method: "GET",
-        headers: headersObject,
-      });
-  
-      if (!response.ok) {
-        throw new Error("Failed to fetch the post");
-      }
-  
-      const postData = await response.json();
-      return postData;
-    } catch (error) {
-      console.error("Error fetching post:", error);
-      throw error;
+  try {
+    const response = await fetch(`${API_SOCIAL_POSTS}/${id}?_author=true`, {
+      method: "GET",
+      headers: headersObject,
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch the post");
     }
+
+    const postData = await response.json();
+    return postData;
+  } catch (error) {
+    console.error("Error fetching post:", error);
+    throw error;
   }
-  
-  
+}
+
 /**
  * Reads multiple posts with optional pagination and tagging.
  *
@@ -50,26 +48,27 @@ export async function readPost(id) {
  */
 
 export async function readPosts(limit = 12, page = 1, tag) {
-  const URL = `${API_SOCIAL_POSTS}?limit=${limit}&page=${page}&_author=true${tag ? `&tag=${tag}` : ''}`;
-  
+  const URL = `${API_SOCIAL_POSTS}?limit=${limit}&page=${page}&_author=true${
+    tag ? `&tag=${tag}` : ""
+  }`;
+
   try {
     const response = await fetch(URL, {
-      method: 'GET',
+      method: "GET",
       headers: headersObject,
     });
 
     if (!response.ok) {
       const errorData = await response.json();
-      console.error('Error:', errorData);
+      console.error("Error:", errorData);
       throw new Error(`Failed to fetch blog posts: ${errorData.message}`);
     }
-    
+
     const { meta, data } = await response.json();
     return { meta, data };
-
   } catch (error) {
-    console.error('Failed to fetch blog posts', error);
-    throw error; // Re-throw the error to handle it where the function is called if needed
+    console.error("Failed to fetch blog posts", error);
+    throw error;
   }
 }
 
@@ -83,7 +82,4 @@ export async function readPosts(limit = 12, page = 1, tag) {
  * @returns {Promise<object>} Object with data and meta fields.
  * @throws {Error} If the API request fails.
  */
-export async function readPostsByUser(username, limit = 12, page = 1, tag) {
-     
-   
-}
+export async function readPostsByUser(username, limit = 12, page = 1, tag) {}

@@ -2,8 +2,6 @@
  * This function should pass data to the register function in api/auth and handle the response
  */
 
-// export async function onRegister(event) {}
-
 import { register } from "../../api/auth/register";
 
 export async function onRegister(event) {

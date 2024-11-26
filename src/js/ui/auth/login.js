@@ -2,10 +2,6 @@
  * This function should pass data to the login function in api/auth and handle the response
  */
 
-// export async function onLogin(event) {}
-
-/*____________________________________*/
-
 import { login } from "../../api/auth/login";
 
 export async function onLogin(event) {
@@ -18,10 +14,9 @@ export async function onLogin(event) {
       email,
       password,
     });
-      alert("login successfully");
-      
-    window.location.href = "/";
+    alert("login successfully");
 
+    window.location.href = "/";
   } catch (error) {
     console.error("Login failed:", error);
     alert("Login failed. Please check your credentials and try again.");
