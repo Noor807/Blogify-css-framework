@@ -212,13 +212,13 @@ form input[type="password"]:focus {
 }
 
 #login-btn:hover {
-  background-color:rgb(241, 241, 74);; 
+  background-color: #E0A030; 
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
 
 /*------------------------create blog post-------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
 
 main {
   margin: 0 auto;
@@ -253,7 +253,7 @@ main {
 #create-blog-form label {
   margin-bottom: 5px;
   font-weight: bold;
-  color: #555;
+  color: #161515;
 }
 
 input[type="text"],
@@ -283,7 +283,7 @@ textarea:focus {
 }
 
 .submit:hover {
-  background-color:lightsalmon;
+  background-color: #E0A030;
 }
 
 input[type="text"][placeholder="Optional"] {
@@ -312,7 +312,7 @@ input[type="text"][placeholder="Optional"] {
 }
 
 .carousel-btn button:hover {
-  background-color: rgb(241, 241, 74);; 
+  background-color:  #E0A030; 
   transform: scale(1.05); 
 }
 
