@@ -1,6 +1,9 @@
 /**
- * Passes data to the createPost function in api/post and handles the response
- */
+ * Handles the creation of a new blog post by collecting data from a form,
+ * validating input, and calling the API to create the post.
+ *
+ * @param {Event} e - The submit event triggered by the form submission.
+*/
 
 import { createBlogPost } from "../../api/post/create.js";
 

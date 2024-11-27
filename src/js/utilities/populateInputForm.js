@@ -1,3 +1,10 @@
+/**
+ * Fills the "editPost" form with data from the provided blog post object.
+ *
+ * @param {Object} post - The blog post data.
+ * @returns {void}
+ */
+
 export function populateInputForm(post) {
   document.forms.editPost.title.value = post.data.title;
   document.forms.editPost.body.value = post.data.body;
@@ -12,3 +19,4 @@ export function populateInputForm(post) {
     : "";
   document.forms.editPost.id.value = post.data.id;
 }
+

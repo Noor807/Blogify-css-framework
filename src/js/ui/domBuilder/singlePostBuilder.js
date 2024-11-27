@@ -1,3 +1,9 @@
+/**
+ * Fetches and renders a single blog post inside the container with ID "singlePostContainer".
+ *
+ * @param {string} postId - The ID of the blog post to fetch.*/
+
+
 import { readPost } from "../../api/post/read";
 
 export async function RenderSinglePost(postId) {

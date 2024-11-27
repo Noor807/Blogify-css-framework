@@ -1,3 +1,11 @@
+/**
+ * Fetches blog posts for a specific page and optional tag, then renders them in the DOM.
+ * Updates pagination buttons based on metadata.
+ *
+ * @param {number} [page=1] - The page number to fetch.
+ * @param {string} [tag=""] - Optional tag filter for the posts.
+*/
+
 import { readPosts } from "../../api/post/read";
 import { renderBlogPosts } from "../domBuilder/homeBuilder";
 

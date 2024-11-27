@@ -6,6 +6,6 @@ authGuard();
 setLogoutListener();
 
 fetchPosts();
-// Set up the event listeners for the pagination buttons
+
 document.getElementById("left").addEventListener("click", goLeft);
 document.getElementById("right").addEventListener("click", goRight);
