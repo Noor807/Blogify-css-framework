@@ -8,78 +8,42 @@
     <script type="module" src="/src/app.js"></script>
   </head>
   <body>
-    <header>
-    <div class="profile-container">
-      <!-- Background Section -->
-      <div class="profile-background">
-        <!-- Profile Card -->
-        <div class="profile-card">
-          <img class="avatar" src="https://media.istockphoto.com/id/1360062763/vector/golden-glitter-and-sparkles-in-sun-rays-background-yellow-lines-in-shiny-light-vector.jpg?s=1024x1024&w=is&k=20&c=OO7Gimx7cxXOkhP9H8XGAUiUgqJ6tCzie4gUsRcb7io=" alt="User Avatar">
-          <h2 class="username">haniah123</h2>
-          <a href="#" class="edit-profile-link">edit profile</a>
-        </div>
-        <!-- Stats Section -->
-        <div class="stats-bar">
-          <span>Followers: <strong>1</strong></span>
-          <span>Following: <strong>2</strong></span>
-          <span>Posts: <strong>7</strong></span>
-        </div>
+    <div class="profile-page">
+      <div class="profile-banner" id="profile-banner"></div>
+      <div class="profile-info">
+        <img id="profile-avatar" class="avatar" src="" alt="Profile Avatar">
+        <h1 id="profile-name">Profile Name</h1>
+        <p id="profile-bio">This is the user's bio.</p>
+        <button id="follow-btn" class="btn follow">Follow</button>
+        <button id="unfollow-btn" class="btn unfollow">Unfollow</button>
+        <button id="edit-profile-btn" class="btn edit">Edit Profile</button>
       </div>
-    </header>
-  <main>
-      <!-- Bio Section -->
-      <div class="bio-section">
-        <h3>Bio:</h3>
-        <p>BlogiFy </p>
+      <div class="posts-section">
+        <h2>Posts</h2>
+        <div id="posts-container" class="posts-container"></div>
+      </div>
+      <div class="search-section">
+        <h2>Search Profiles</h2>
+        <input type="text" id="search-query" placeholder="Search profiles...">
+        <button id="search-btn" class="btn search">Search</button>
+        <div id="search-results" class="search-results"></div>
       </div>
     </div>
+  
+    <!-- Modal for Editing Profile -->
+    <!-- Modal or Form for Editing Profile -->
+<form id="edit-profile-form">
+  <label for="edit-avatar">Avatar URL:</label>
+  <input type="text" id="edit-avatar" placeholder="Enter avatar URL">
 
-    <h1>The profile page is currently under construction.</h1>
+  <label for="edit-banner">Banner URL:</label>
+  <input type="text" id="edit-banner" placeholder="Enter banner URL">
 
-      <!------------------------------ Posts Section ------------------------------------->
-      <main>
-      <section class="posts-section">
-        <h3 class="section-title">Posts</h3>
-        <div class="posts-grid">
-          <div class="post-item">
-            <img src="https://url.com/post-image1.jpg" alt="Post 1" />
-          </div>
-          <div class="post-item">
-            <img src="https://url.com/post-image2.jpg" alt="Post 2" />
-          </div>
-          <div class="post-item">
-            <img src="https://url.com/post-image3.jpg" alt="Post 3" />
-          </div>
-          <div class="post-item">
-            <img src="https://url.com/post-image4.jpg" alt="Post 4" />
-          </div>
-          <div class="post-item">
-            <img src="https://url.com/post-image5.jpg" alt="Post 5" />
-          </div>
-          <!-- Add more post-item blocks as needed -->
-        </div>
-      </section>
-    </div>
+  <!-- Hidden input or accessible username -->
+  <input type="hidden" id="profile-username" value="exampleUser">
 
-   <!-------------------------- update profile----------------------------------------------------- -->
-    <div class="update-container">
-      <h1>Update Profile</h1>
-      <form id="updateProfileForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required />
+  <button type="submit">Save</button>
+</form>
+
   
-        <label for="avatar">Avatar URL:</label>
-        <input type="url" id="avatar" name="avatar" placeholder="Enter avatar URL" />
-  
-        <label for="banner">Banner URL:</label>
-        <input type="url" id="banner" name="banner" placeholder="Enter banner URL" />
-  
-        <label for="mediaAlt">Media Alt Text:</label>
-        <input type="text" id="mediaAlt" name="mediaAlt" placeholder="Optional" />
-  
-        <button type="submit">Update Profile</button>
-      </form>
-    </div>
-  </main>
-  </body>
 </html>

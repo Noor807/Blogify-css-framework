@@ -1,1 +1,5 @@
-export async function updateProfile(username, { avatar, banner }) {}
+
+export async function updateProfile(username, { avatar, banner }) { }
+    
+
+  
