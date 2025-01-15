@@ -1,9 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Add Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
@@ -12,33 +16,51 @@
     <script type="module" src="/src/app.js"></script>
   </head>
 
-  <body>
-    <main class="login-main">
-      <h1 class="register-here to-blue-600">Login here</h1>
-      <div class="form-container">
-        <form id="login-form" name="login">
-          <label for="email-input">Email</label>
-          <input
-            id="email-input"
-            type="email"
-            name="email"
-            placeholder="@stud.noroff.no"
-          />
-          <label for="password-input">Password</label>
-          <input
-            id="password-input"
-            name="password"
-            type="password"
-            placeholder="enter your password"
-          />
-          <button id="login-btn" type="submit">Login</button>
-          <p class="para">
-            Don't have an account?<a class="a-btn" href="/auth/register/">
-              Register here</a
+  <body class="bg-gray-50 font-sans text-gray-900">
+    <main class="bg-blue-950 flex justify-center items-center min-h-screen px-4 py-6">
+      <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-xl-sm md:text-2xl lg:text-3xl font-bold text-black mb-6 text-center">Login here</h1>
+        
+        <div class="form-container">
+          <form id="login-form" name="login" class="space-y-6">
+            <div>
+              <label for="email-input" class="block text-sm font-medium text-gray-700">Email</label>
+              <input
+                id="email-input"
+                type="email"
+                name="email"
+                placeholder="@stud.noroff.no"
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label for="password-input" class="block text-sm font-medium text-gray-700">Password</label>
+              <input
+                id="password-input"
+                name="password"
+                type="password"
+                placeholder="Enter your password"
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <button
+              id="login-btn"
+              type="submit"
+              class="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200"
             >
-          </p>
-        </form>
+              Login
+            </button>
+            
+            <p class="text-center  text-sm text-gray-600">
+              Don't have an account?
+              <a class="text-blue-700  hover:underline text-bold" href="/auth/register/">Register here</a>
+            </p>
+          </form>
+        </div>
       </div>
     </main>
   </body>
 </html>
+
