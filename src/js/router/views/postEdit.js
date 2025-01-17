@@ -16,3 +16,11 @@ populateInputForm(response);
 const form = document.forms.editPost;
 
 form.addEventListener("submit", onUpdatePost);
+
+
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const navbarLinks = document.getElementById("navbar-links");
+
+hamburgerBtn.addEventListener("click", () => {
+    navbarLinks.classList.toggle("hidden");
+});

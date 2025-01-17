@@ -14,3 +14,10 @@ const editButton = document.querySelector(".edit-btn");
 editButton.addEventListener("click", () => {
   window.location.href = `/post/edit/?post=${postId}`;
 });
+
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const navbarLinks = document.getElementById("navbar-links");
+
+hamburgerBtn.addEventListener("click", () => {
+    navbarLinks.classList.toggle("hidden");
+});

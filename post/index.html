@@ -1,33 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
-    <script type="module" src="/src/app.js"></script>
-  </head>
-  <body>
-    <header>
-      <div class="navbar">
-        <a href="/"
-          ><img class="logo" src="/images/blogify.png" alt="noroff logo"
-        /></a>
-        <ul>
-          <li>
-            <a href="/profile/">My Profile</a>
-            <a href="/post/create/">Create post</a>
-            <button id="logout-Btn" type="button">Logout</button>
-          </li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noroff FED2 JS2 CA</title>
+  <script type="module" src="/src/app.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="navbar bg-cyan-600 p-4 flex justify-between relative items-center">
+      <!-- Logo -->
+      <a href="/" class="text-white">
+        <img class="logo h-12 max-w-full sm:h-16 md:h-20 lg:h-26 xl:h-28" src="/images/blogify.png" alt="noroff logo" />
+
+      </a>
+
+      <!-- Hamburger Menu for Small Screens -->
+      <div class="lg:hidden flex items-center">
+        <button id="hamburger-btn" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
-    </header>
 
-    <main class="blog-brief">
-      <div id="singlePostContainer"></div>
+      <!-- Navigation Links -->
+      <ul id="navbar-links"
+        class="lg:flex lg:flex-row absolute lg:static w-full place-items-center pb-3 lg:space-x-6 hidden space-y-4 top-[100%] bg-cyan-600 right-0 lg:space-y-0 lg:justify-end lg:ml-auto flex flex-col justify-center">
+        <li><a href="/profile/" class="text-white font-semibold hover:underline">My Profile</a></li>
+        <li><a href="/post/create/" class="text-white font-semibold hover:underline">Create Post</a></li>
+        <li>
+          <button id="logout-Btn" type="button"
+            class="bg-red-600 text-white py-1 font-semibold px-4 rounded-md hover:bg-orange-400 transition">
+            Logout
+          </button>
+        </li>
+      </ul>
 
-      <button class="edit-btn admin-hidden">Edit post</button>
-      <button class="del-btn admin-hidden">Delete post</button>
+    </div>
+  </header>
+
+  <body class="bg-gray-50 font-sans">
+    <main class="blog-brief px-4 py-6">
+      <!-- Post container -->
+      <div id="singlePostContainer" class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
+        <!-- Post content will go here -->
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800">Post Title</h1>
+        <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-700">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+      </div>
+
+      <!-- Edit and Delete buttons -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+        <button
+          class="edit-btn admin-hidden font-semibold bg-orange-600 text-black py-2 px-4 rounded-md hover:bg-orange-300 transition duration-200">
+          Edit post
+        </button>
+        <button
+          class="del-btn admin-hidden bg-orange-400 text-black py-2 px-4 rounded-md font-semibold hover:bg-orange-300 transition duration-200">
+          Delete post
+        </button>
+      </div>
     </main>
   </body>
+
 </html>

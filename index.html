@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" src="/src/app.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
 
-  <body>
-    <header>
-      <div class="navbar">
-        <img class="logo" src="/images/blogify.png" alt="noroff logo" />
-        <ul>
-          <li>
-            <a href="/profile/">My Profile</a>
-            <a href="/post/create/">Create post</a>
-            <button id="logout-Btn" type="button">Logout</button>
-          </li>
-        </ul>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noroff FED2 JS2 CA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <script type="module" src="/src/app.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="navbar bg-cyan-600 p-4 flex justify-between relative items-center">
+      <!-- Logo -->
+      <a href="/" class="text-white">
+        <img class="logo h-12 max-w-full sm:h-16 md:h-20 lg:h-26 xl:h-28" src="/images/blogify.png" alt="noroff logo" />
+      </a>
+      <!-- Hamburger Menu for Small Screens -->
+      <div class="lg:hidden flex items-center">
+        <button id="hamburger-btn" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
-    </header>
+     <!-- Navigation Links -->
+      <ul id="navbar-links"
+        class="lg:flex lg:flex-row absolute lg:static w-full place-items-center pb-3 lg:space-x-6 hidden space-y-4 top-[100%] bg-cyan-600 right-0 lg:space-y-0 lg:justify-end lg:ml-auto flex flex-col justify-center">
+        <li><a href="/profile/" class="text-white font-semibold hover:underline">My Profile</a></li>
+        <li><a href="/post/create/" class="text-white font-semibold hover:underline">Create Post</a></li>
+        <li>
+          <button id="logout-Btn" type="button"
+            class="bg-red-600 text-white py-1 px-4 font-semibold rounded-md hover:bg-orange-400 transition">
+            Logout
+          </button>
+        </li>
+      </ul>
+     
+    </div>
+  </header>
 
-    <main>
-      <section class="blog-section">
-        <h2 class="create-heading">Blog posts</h2>
+  <main>
+    <section class="blog-section">
+      <h2 class="create-heading">Blog posts</h2>
 
-        <div id="blogContainer"></div>
-        <div id="paginationContainer" class="pagination-controls">
-          <div class="carousel-btn">
-            <button id="left">Prev</button>
-            <button id="right">Next</button>
-          </div>
+      <div id="blogContainer"></div>
+      <div id="paginationContainer" class="pagination-controls">
+        <div class="carousel-btn">
+          <button id="left">Prev</button>
+          <button id="right">Next</button>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer></footer>
-  </body>
+  <footer></footer>
+</body>
+
 </html>

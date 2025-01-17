@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet" />
   <title>Noroff FED2 JS2 CA</title>
   <script type="module" src="/src/app.js"></script>
 </head>
@@ -24,16 +26,19 @@
 
         <div>
           <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input id="email" type="email" name="email"  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+          <input id="email" type="email" name="email"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
             title="Please enter a valid noroff.no or stud.noroff.no address" />
         </div>
 
         <div>
           <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-          <input type="password" name="password" id="password" required minlength="8"  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <input type="password" name="password" id="password" required minlength="8"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </div>
         <button id="login-btn" type="submit"
-        class="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200 mt-4">Register</button>
+          class="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200 mt-4">Register</button>
         <p class="text-center  text-sm text-gray-600 mt-2">
           If you have an account?<a class="text-blue-700  hover:underline text-bold" href="/auth/login/">
             Login here</a>
