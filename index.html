@@ -34,7 +34,7 @@
         <li><a href="/post/create/" class="text-white font-semibold hover:underline">Create Post</a></li>
         <li>
           <button id="logout-Btn" type="button"
-            class="bg-red-600 text-white py-1 px-4 font-semibold rounded-md hover:bg-orange-400 transition">
+            class="bg-yellow-700 text-white py-1 px-4 font-semibold rounded-md hover:bg-orange-500 transition">
             Logout
           </button>
         </li>
@@ -44,18 +44,24 @@
   </header>
 
   <main>
-    <section class="blog-section">
-      <h2 class="create-heading">Blog posts</h2>
-
-      <div id="blogContainer"></div>
-      <div id="paginationContainer" class="pagination-controls">
-        <div class="carousel-btn">
-          <button id="left">Prev</button>
-          <button id="right">Next</button>
+    <section class="blog-section py-8 px-4 sm:px-6 md:px-8 lg:px-16">
+      <h2 class="create-heading text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800 mb-6 text-center">
+        Blog posts
+      </h2>
+  
+      <div id="blogContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Blog posts will be appended here -->
+      </div>
+  
+      <div id="paginationContainer" class="pagination-controls flex justify-center mt-8">
+        <div class="carousel-btn flex items-center space-x-4">
+          <button id="left" class="bg-orange-400 border-2 border-orange-800  text-black font-semibold py-2 px-4 rounded-md hover:bg-yellow-500 focus:border-orange-400 transition duration-200">Prev</button>
+          <button id="right" class="bg-orange-400 focus:border-orange-400  text-black font-semibold py-2 px-4 rounded-md hover:bg-yellow-500 transition duration-200">Next</button>
         </div>
       </div>
     </section>
   </main>
+  
 
   <footer></footer>
 </body>

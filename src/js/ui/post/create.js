@@ -39,4 +39,5 @@ export async function onCreatePost(e) {
     console.error("Error:", error);
     alert("Failed to create blog post: " + error.message);
   }
+
 }
