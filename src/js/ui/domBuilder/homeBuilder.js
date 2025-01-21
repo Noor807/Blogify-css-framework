@@ -33,7 +33,7 @@ export function renderBlogPosts(array) {
 
     const postLink = document.createElement("a");
     // postLink.className = "blog-dev";
-     postLink.className = "block bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out mb-6 p-4";
+     postLink.className = "block bg-gray-200 rounded-lg shadow-md hover:shadow-lg hover:scale-90 transition-all duration-500 ease-in-out mb-6 p-4";
     postLink.href = `/post/?post=${id}`;
 
     const img = document.createElement("img");

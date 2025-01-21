@@ -3,12 +3,10 @@
 
 <head>
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Noroff FED2 JS2 CA</title>
   <script type="module" src="/src/app.js"></script>
 </head>
-
 
 <body class="bg-gray-100 font-sans">
   <header>
@@ -41,10 +39,10 @@
      
     </div>
   </header>
-
-  <main class="p-6">
+  
+  <main class="p-8">
     <!-- Profile Page Container -->
-    <div class="max-w-7xl mx-3">
+    <div class="max-w-7xl mx-3 my-5">
 
       <!-- Profile Banner -->
       <div class="bg-gray-500 h-64 rounded-lg mb-6 relative">
@@ -69,23 +67,25 @@
       </div>
 
       <!-- Profile Information -->
-      <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+      <div class="bg-gray-200 border border-gray-300 p-6 rounded-lg shadow-md mb-6">
         <h1 class="text-3xl font-semibold text-gray-800" id="profile-name">Noor Irfan</h1>
         <p class="text-gray-600" id="profile-bio">Hi, Noor Irfan here. FED student</p>
       </div>
 
       <!-- Search Blog Posts Section -->
-      <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Search Blog Posts</h2>
+      <div class="bg-yellow-100 p-6 border border-gray-300 rounded-lg shadow-md mb-6">
+        <h2 class="text-2xl font-semibold text-black mb-4">Search Blog Posts:</h2>
         <input type="text" id="search-query" placeholder="Search blog posts..."
           class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:outline-none mb-4">
-        <button id="search-btn" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Search</button>
+        <button id="search-btn"
+          class="bg-orange-400 text-black font-semibold py-2 px-4 rounded-md hover:bg-yellow-500 focus:ring-2 focus:ring-orange-400 focus:border-orange-400 ">Search</button>
       </div>
 
       <!-- Blog Posts Section -->
-      <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Blog Posts</h2>
-        <div id="posts-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-cyan-700 mt-16 p-6 border border-gray-300 rounded-lg shadow-md mb-6">
+        <h2 class="text-2xl font-semibold text-white mb-4 text-center">Blog Posts</h2>
+        <div id="posts-container"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6">
           <!-- Mock Blog Post Cards -->
           <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
             <img
@@ -120,19 +120,10 @@
             <input type="text" id="edit-avatar" class="w-full p-3 border border-gray-300 rounded-md"
               placeholder="Enter avatar URL">
           </div>
-          <div class="mb-4">
-            <label for="edit-banner" class="block text-gray-700">Banner URL:</label>
-            <input type="text" id="edit-banner" class="w-full p-3 border border-gray-300 rounded-md"
-              placeholder="Enter banner URL">
-          </div>
-          <button type="submit" class="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600">Save
-            Changes</button>
         </form>
       </div>
-
     </div>
   </main>
-
 </body>
 
 </html>

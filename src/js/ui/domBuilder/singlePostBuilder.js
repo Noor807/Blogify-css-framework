@@ -39,7 +39,7 @@ export async function RenderSinglePost(postId) {
     const imageElement = document.createElement("img");
     imageElement.src = data.data.media?.url || "";
     imageElement.alt = data.data.media?.alt || "Blog image";
-    imageElement.classList.add("w-full", "h-15", "rounded-lg", "mt-4", "object-cover");
+    imageElement.classList.add( "w-full", "rounded-lg", "mt-4", "object-cover", "lg:w-[900px]");
 
     // Append the elements to the post container
     postContainer.appendChild(titleElement);
