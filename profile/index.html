@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,11 +11,11 @@
 <body class="bg-gray-100 font-sans">
   <header>
     <div class="navbar bg-cyan-600 p-4 flex justify-between relative items-center"> 
-      <!-- Logo -->
+       <!--Logo--> 
       <a href="/" class="text-white">
         <img class="logo h-12 max-w-full sm:h-16 md:h-20 lg:h-26 xl:h-28" src="/images/blogify.png" alt="noroff logo" />
       </a>
-       <!--Hamburger Menu for Small Screens--> 
+      <!--Hamburger Menu for Small Screens-->  
       <div class="lg:hidden flex items-center">
         <button id="hamburger-btn" class="text-white">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -25,7 +25,7 @@
         </button>
       </div>
 
-       <!-- Navigation Links-->
+<!-- Navigation Links-->
       <ul id="navbar-links"
         class="lg:flex lg:flex-row absolute lg:static w-full place-items-center pb-3 lg:space-x-6 hidden space-y-4 top-[100%] bg-cyan-600 right-0 lg:space-y-0 lg:justify-end lg:ml-auto flex flex-col justify-center">
         <li><a href="/profile/" class="text-white font-semibold hover:underline">My Profile</a></li>
@@ -42,33 +42,33 @@
   </header>
 
   <main class="p-8">
-  <!--Profile Page Container-->
+<!--Profile Page Container-->
     <div class="max-w-7xl mx-auto p-6">
       <div class="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-8">
-        <!-- Profile Imager-->
+<!-- Profile Imager-->
         <div class="flex-shrink-0 mb-6 lg:mb-0">
           <img class="h-32 w-32 rounded-full object-cover"
             src="https://media.istockphoto.com/id/1922730400/photo/woman-walking-through-meadow-and-touching-beautiful-white-flowers-at-sunset-closeup-space-for.jpg?s=1024x1024&w=is&k=20&c=CrYLjOw0aT3ld0wQVS9DkFYh1Kip5vDIRZ3Td-mJ2m8="
             alt="Profile Picture">
         </div>
-       <!-- Profile Info--> 
+<!-- Profile Info>--> 
         <div class="flex-1">
           <div class="flex items-center justify-between mb-1">
             <div>
-              <h1 class="text-3xl font-semibold">Noor Irfan</h1>
+              <h1 class="text-3xl sm:text-xl font-semibold">Noor Irfan</h1>
               <p class="text-sm text-gray-600">Username: @noor_erfan</p>
             </div>
             <div>
-              <button class="bg-blue-500 ml-7 font-semibold text-white px-4 py-2 text-sm">Follow</button>
+              <button class="bg-yellow-400 rounded-md border-2 border-orange-700 hover:bg-yellow-200 ml-7 font-semibold text-black px-4 py-1 text-sm">Follow</button>
             </div>
             
           </div>
           <div class="mt-1">
-            <p class="text-sm sm:text-base md:text-lg text-gray-600 font-normal">Bio: FED student at Noroff</p>
+            <p class="text-sm sm:text-base md:text-md text-gray-600 font-normal">Bio: FED student at Noroff</p>
 
           </div>
           <div>
-            <button class="bg-gray-300 text-center  border-teal-950 border-2 ml-7 font-semibold text-black px-5  text-sm">Edit profile</button>
+            <button class="bg-gray-300 text-center  border-teal-950 border-2 ml-7 font-semibold text-black px-4  text-sm">Edit profile</button>
           </div>
           <div class="mt-4 grid grid-cols-3 ">
             <div class="text-center mt-5">
@@ -87,8 +87,8 @@
         </div>
       </div>
     </div>
-    
-      <!-- Search Blog Posts Section--> 
+
+<!-- Search Blog Posts Section-->
     <div class="bg-yellow-100 p-4 border border-gray-300 rounded-lg shadow-md mb-6 max-w-sm mx-auto">
       <h2 class="text-xl font-semibold text-black mb-3">Search Blog Posts:</h2>
       <input type="text" id="search-query" placeholder="Search blog posts..."
@@ -96,14 +96,14 @@
       <button id="search-btn"
         class="bg-orange-400 text-black font-semibold py-1 px-3 rounded-md hover:bg-yellow-500 focus:ring-2 focus:ring-orange-400 focus:border-orange-400">Search</button>
     </div>
-    
 
-   <!-- Search Blog Posts Section-->
+
+<!-- Search Blog Posts Section-->
     <div class="bg-yellow-700 mt-16 p-6 border border-gray-300 rounded-lg shadow-md mb-6">
       <h2 class="text-2xl font-semibold text-white mb-4 text-center">Blog Posts</h2>
       <div id="posts-container"
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6">
-         <!--  Mock Blog Post Cards-->
+class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+<!--  Mock Blog Post Cards-->
         <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
           <img
             src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -150,7 +150,6 @@
 
     </div>
     
-    <!--  edit profiles--> 
     <div id="edit-profile-form" class="bg-white p-6 rounded-lg shadow-md mb-6 hidden">
       <h3 class="text-2xl font-semibold text-gray-800 mb-4">Edit Profile</h3>
       <form>
@@ -169,9 +168,5 @@
 </body>
 
 </html>
-
-
-
-
 
 

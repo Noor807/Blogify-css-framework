@@ -16,9 +16,9 @@ export async function RenderSinglePost(postId) {
     }
 
     // Title Element
-    const titleElement = document.createElement("h1");
+    const titleElement = document.createElement("h2");
     titleElement.textContent = data.data.title;
-    titleElement.classList.add("text-xl", "sm:text-4xl", "lg:text4xl", "font-semibold", "text-gray-900", "mt-4");
+    titleElement.classList.add("text-xl", "sm:text-3xl", "lg:text-2xl", "font-semibold", "text-gray-900", "mt-4");
 
     // Author Element
     const authorElement = document.createElement("p");

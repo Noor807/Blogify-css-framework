@@ -32,33 +32,30 @@ export function renderBlogPosts(array) {
     } = post || {};
 
     const postLink = document.createElement("a");
-    // postLink.className = "blog-dev";
-     postLink.className = "block bg-gray-200 rounded-lg shadow-md hover:shadow-lg hover:scale-90 transition-all duration-500 ease-in-out mb-6 p-4";
+
+    postLink.className = "block bg-gray-200 rounded-lg shadow-md hover:shadow-lg hover:scale-90 transition-all duration-500 ease-in-out mb-6 p-4";
     postLink.href = `/post/?post=${id}`;
 
     const img = document.createElement("img");
     img.src = media?.url || "";
     img.alt = media?.alt || "No description";
-      img.className = "w-full h-48 object-cover rounded-t-lg";
+    img.className = "w-full h-48 object-cover rounded-t-lg";
     postLink.appendChild(img);
 
     const contentDiv = document.createElement("div");
     contentDiv.className = "pt-4"
 
     const titleElement = document.createElement("h2");
-    // titleElement.className = "title";
-       titleElement.className = "text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition duration-200";
+    titleElement.className = "text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition duration-200";
     titleElement.textContent = title;
     contentDiv.appendChild(titleElement);
 
     const authorElement = document.createElement("p");
-    // authorElement.className = "author";
     authorElement.className = "text-sm text-gray-600 mt-2";
     authorElement.textContent = author.name || "Unknown Author";
     contentDiv.appendChild(authorElement);
 
     const createdElement = document.createElement("p");
-    // createdElement.className = "created";
     createdElement.className = "text-xs text-gray-500 mt-1";
     createdElement.textContent = created
       ? created.slice(0, 10)
@@ -66,7 +63,6 @@ export function renderBlogPosts(array) {
     contentDiv.appendChild(createdElement);
 
     const tagsElement = document.createElement("p");
-    // tagsElement.className = "tags";
     tagsElement.className = "text-sm text-gray-700 mt-2";
     tagsElement.textContent = tags.join(", ");
     contentDiv.appendChild(tagsElement);
