@@ -13,7 +13,7 @@ export default {
         '3xl': 'clamp(4rem, 6vw + 3rem, 6rem)'
       },
       screens: {
-        'xs': '320px',  // You can define this breakpoint at 320px or adjust to your needs
+        'xs': '320px',  
         'sm': '640px',
         'md': '768px',
         'lg': '1024px',

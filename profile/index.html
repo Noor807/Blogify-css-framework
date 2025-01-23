@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,12 +10,12 @@
 
 <body class="bg-gray-100 font-sans">
   <header>
-    <div class="navbar bg-cyan-600 p-4 flex justify-between relative items-center"> 
-       <!--Logo--> 
+    <div class="navbar bg-cyan-600 p-4 flex justify-between items-center relative">
+      <!-- Logo -->
       <a href="/" class="text-white">
         <img class="logo h-12 max-w-full sm:h-16 md:h-20 lg:h-26 xl:h-28" src="/images/blogify.png" alt="noroff logo" />
       </a>
-      <!--Hamburger Menu for Small Screens-->  
+      <!-- Hamburger Menu for Small Screens-->
       <div class="lg:hidden flex items-center">
         <button id="hamburger-btn" class="text-white">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -25,7 +25,7 @@
         </button>
       </div>
 
-<!-- Navigation Links-->
+      <!-- Navigation Links -->
       <ul id="navbar-links"
         class="lg:flex lg:flex-row absolute lg:static w-full place-items-center pb-3 lg:space-x-6 hidden space-y-4 top-[100%] bg-cyan-600 right-0 lg:space-y-0 lg:justify-end lg:ml-auto flex flex-col justify-center">
         <li><a href="/profile/" class="text-white font-semibold hover:underline">My Profile</a></li>
@@ -37,21 +37,21 @@
           </button>
         </li>
       </ul>
-
     </div>
   </header>
 
   <main class="p-8">
-<!--Profile Page Container-->
+    <!-- Profile Page Container -->
     <div class="max-w-7xl mx-auto p-6">
-      <div class="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-8">
-<!-- Profile Imager-->
-        <div class="flex-shrink-0 mb-6 lg:mb-0">
+      <div class="flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-8">
+        <!-- Profile Image -->
+        <div class="flex-shrink-0">
           <img class="h-32 w-32 rounded-full object-cover"
             src="https://media.istockphoto.com/id/1922730400/photo/woman-walking-through-meadow-and-touching-beautiful-white-flowers-at-sunset-closeup-space-for.jpg?s=1024x1024&w=is&k=20&c=CrYLjOw0aT3ld0wQVS9DkFYh1Kip5vDIRZ3Td-mJ2m8="
             alt="Profile Picture">
         </div>
-<!-- Profile Info>--> 
+
+        <!--Profile Info-->
         <div class="flex-1">
           <div class="flex items-center justify-between mb-1">
             <div>
@@ -59,114 +59,142 @@
               <p class="text-sm text-gray-600">Username: @noor_erfan</p>
             </div>
             <div>
-              <button class="bg-yellow-400 rounded-md border-2 border-orange-700 hover:bg-yellow-200 ml-7 font-semibold text-black px-4 py-1 text-sm">Follow</button>
+              <button
+                class="bg-yellow-400 rounded-md border-2 border-orange-700 hover:bg-yellow-200 ml-7 font-semibold text-black px-4 py-1 text-sm">Follow</button>
             </div>
-            
           </div>
           <div class="mt-1">
             <p class="text-sm sm:text-base md:text-md text-gray-600 font-normal">Bio: FED student at Noroff</p>
-
           </div>
           <div>
-            <button class="bg-gray-300 text-center  border-teal-950 border-2 ml-7 font-semibold text-black px-4  text-sm">Edit profile</button>
+            <button
+              class="bg-gray-300 text-center border-teal-950 border-2 ml-7 font-semibold text-black px-5 text-sm">Edit
+              profile</button>
           </div>
-          <div class="mt-4 grid grid-cols-3 ">
-            <div class="text-center mt-5">
-              <p class="font-semibold">120</p>
-              <p class="text-sm text-gray-500">Posts</p>
-            </div>
-            <div class="text-center mt-5">
-              <p class="font-semibold">500</p>
-              <p class="text-sm text-gray-500">Followers</p>
-            </div>
-            <div class="text-center mt-5">
-              <p class="font-semibold">180</p>
-              <p class="text-sm text-gray-500">Following</p>
-            </div>
-          </div>
-        </div>
+          <!-- Action Buttons -->
+<div class="mt-8 grid grid-cols-3 mb-12 border-b-2">
+  <div class="text-center mt-5">
+    <button id="posts-btn" class="font-semibold cursor-pointer text-indigo-600">120 Posts</button>
+  </div>
+  <div class="text-center mt-5">
+    <button id="followers-btn" class="font-semibold cursor-pointer text-indigo-600">500 Followers</button>
+  </div>
+  <div class="text-center mt-5">
+    <button id="following-btn" class="font-semibold cursor-pointer text-indigo-600">180 Following</button>
+  </div>
+</div>
+
+<!-- Containers for Followers, Following, Blog Posts -->
+<div class="container">
+  <!-- Posts Section -->
+  <div id="posts-container" class="hidden bg-yellow-700 mt-16 p-6 border border-gray-300 rounded-lg shadow-md mb-6">
+    <h2 class="text-2xl font-semibold text-white mb-4 text-center">Blog Posts</h2>
+    <!-- Mock Blog Post Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Blog Post Cards (You can keep your existing cards here) -->
+      <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Post Image" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="font-semibold text-lg text-gray-800">Blog Post Title</h3>
+        <p class="text-gray-600 text-sm">Published on January 1, 2025</p>
       </div>
+      <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Post Image" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="font-semibold text-lg text-gray-800">Blog Post Title</h3>
+        <p class="text-gray-600 text-sm">Published on January 1, 2025</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Post Image" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="font-semibold text-lg text-gray-800">Blog Post Title</h3>
+        <p class="text-gray-600 text-sm">Published on January 1, 2025</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Post Image" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="font-semibold text-lg text-gray-800">Blog Post Title</h3>
+        <p class="text-gray-600 text-sm">Published on January 1, 2025</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Post Image" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="font-semibold text-lg text-gray-800">Blog Post Title</h3>
+        <p class="text-gray-600 text-sm">Published on January 1, 2025</p>
+      </div>
+      <!-- Add other blog post cards here -->
     </div>
+  </div>
 
-<!-- Search Blog Posts Section-->
-    <div class="bg-yellow-100 p-4 border border-gray-300 rounded-lg shadow-md mb-6 max-w-sm mx-auto">
-      <h2 class="text-xl font-semibold text-black mb-3">Search Blog Posts:</h2>
-      <input type="text" id="search-query" placeholder="Search blog posts..."
-        class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:outline-none mb-3">
-      <button id="search-btn"
-        class="bg-orange-400 text-black font-semibold py-1 px-3 rounded-md hover:bg-yellow-500 focus:ring-2 focus:ring-orange-400 focus:border-orange-400">Search</button>
-    </div>
+  <!-- Followers Section -->
+  <div id="followers-section" class="hidden followers-container max-w-md sm:max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md mt-8">
+    <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">Followers</h2>
+    <ul class="follower-list space-y-4">
+      <li class="follower-item bg-gray-100 p-4 rounded-md hover:bg-gray-200 cursor-pointer text-sm sm:text-base">John Doe</li>
+      <li class="follower-item bg-gray-100 p-4 rounded-md hover:bg-gray-200 cursor-pointer text-sm sm:text-base">Jane Smith</li>
+      <li class="follower-item bg-gray-100 p-4 rounded-md hover:bg-gray-200 cursor-pointer text-sm sm:text-base">Chris Johnson</li>
+      <li class="follower-item bg-gray-100 p-4 rounded-md hover:bg-gray-200 cursor-pointer text-sm sm:text-base">Emma White</li>
+      <li class="follower-item bg-gray-100 p-4 rounded-md hover:bg-gray-200 cursor-pointer text-sm sm:text-base">Michael Brown</li>
+    </ul>
+  </div>
 
+  <!-- Following Section -->
+  <div id="following-section" class="hidden following-container max-w-md sm:max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md mt-8">
+    <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">Following</h2>
+    <ul class="following-list space-y-4">
+      <li class="following-item bg-gray-100 p-4 rounded-md hover:bg-gray-200 cursor-pointer text-sm sm:text-base">Alice Cooper</li>
+      <li class="following-item bg-gray-100 p-4 rounded-md hover:bg-gray-200 cursor-pointer text-sm sm:text-base">Bob Marley</li>
+      <li class="following-item bg-gray-100 p-4 rounded-md hover:bg-gray-200 cursor-pointer text-sm sm:text-base">Charlie Brown</li>
+      <li class="following-item bg-gray-100 p-4 rounded-md hover:bg-gray-200 cursor-pointer text-sm sm:text-base">Diana Ross</li>
+      <li class="following-item bg-gray-100 p-4 rounded-md hover:bg-gray-200 cursor-pointer text-sm sm:text-base">Eve Carter</li>
+    </ul>
+  </div>
+</div>
 
-<!-- Search Blog Posts Section-->
-    <div class="bg-yellow-700 mt-16 p-6 border border-gray-300 rounded-lg shadow-md mb-6">
-      <h2 class="text-2xl font-semibold text-white mb-4 text-center">Blog Posts</h2>
-      <div id="posts-container"
-class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6">
-<!--  Mock Blog Post Cards-->
-        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
-          <img
-            src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Blog Post Image" class="w-full h-48 object-cover rounded-md mb-4">
-          <h3 class="font-semibold text-lg text-gray-800">Blog Post Title</h3>
-          <p class="text-gray-600 text-sm">Published on January 1, 2025</p>
+    <!------------------profile undate------------------------------->
+    <div class="profile-update-container max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md mt-8">
+      <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">Update Your Profile</h2>
+
+      <form class="profile-update-form space-y-6">
+
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="name" class="block text-sm font-medium text-gray-700">Full Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required
+            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
         </div>
-        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
-          <img
-            src="https://media.istockphoto.com/id/1653016969/photo/vegan-protein-source-top-view.jpg?s=612x612&w=is&k=20&c=nsykWvwuTqMi7qJEKgW8_0odoJqQgwRCeIPO4d2q1h0="
-            alt="Blog Post Image" class="w-full h-48 object-cover rounded-md mb-4">
-          <h3 class="font-semibold text-lg text-gray-800">Blog Post Title</h3>
-          <p class="text-gray-600 text-sm">Published on February 10, 2025</p>
+
+        <!-- Bio -->
+        <div class="form-group">
+          <label for="bio" class="block text-sm font-medium text-gray-700">Bio:</label>
+          <textarea id="bio" name="bio" placeholder="Tell us about yourself" rows="4" required
+            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
         </div>
-        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
-          <img
-            src="https://plus.unsplash.com/premium_photo-1681426687411-21986b0626a8?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Blog Post Image" class="w-full h-48 object-cover rounded-md mb-4">
-          <h3 class="font-semibold text-lg text-gray-800">Blog Post Title</h3>
-          <p class="text-gray-600 text-sm">Published on March 21, 2025</p>
+
+        <!-- Avatar (Profile Picture) -->
+        <div class="form-group">
+          <label for="avatar" class="block text-sm font-medium text-gray-700">Profile Picture:</label>
+          <input type="avatar" id="avatar" name="avatar" accept="image/*"
+            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
         </div>
-        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
-          <img
-            src="https://media.istockphoto.com/id/2176133845/photo/2025-new-year-environment-concepts-sustainable-environment-development-goals-green-business.jpg?s=1024x1024&w=is&k=20&c=qZFr7lcZTZDwNPNjPqi9gMsIncZWpCgYsnLDzdogQ4M="
-            alt="Blog Post Image" class="w-full h-48 object-cover rounded-md mb-4">
-          <h3 class="font-semibold text-lg text-gray-800">Blog Post Title</h3>
-          <p class="text-gray-600 text-sm">Published on January 1, 2025</p>
+
+        <!-- Banner Image -->
+        <div class="form-group">
+          <label for="banner" class="block text-sm font-medium text-gray-700">Banner Image:</label>
+          <input type="banner" id="banner" name="banner" accept="image/*"
+            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
         </div>
-        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
-          <img
-            src="https://media.istockphoto.com/id/972694266/photo/motivational-and-inspirational-quote.jpg?s=1024x1024&w=is&k=20&c=GAAxRP1DrTmrPIZu5u77nl7H_9qtRiJAlEyqTEu8lVQ="
-            alt="Blog Post Image" class="w-full h-48 object-cover rounded-md mb-4">
-          <h3 class="font-semibold text-lg text-gray-800">Blog Post Title</h3>
-          <p class="text-gray-600 text-sm">Published on February 10, 2025</p>
-        </div>
-        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
-          <img
-            src="https://media.istockphoto.com/id/497315278/photo/two-friendly-cats.jpg?s=1024x1024&w=is&k=20&c=W18enSIvqXJlKyQ8m3ZUBTbMCJgGKwtXW96kV3e6dzE="
-            alt="Blog Post Image" class="w-full h-48 object-cover rounded-md mb-4">
-          <h3 class="font-semibold text-lg text-gray-800">Blog Post Title</h3>
-          <p class="text-gray-600 text-sm">Published on March 21, 2025</p>
-        </div>
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+              Update Profile
+          </button>
       </div>
 
-    </div>
-    
-    <div id="edit-profile-form" class="bg-white p-6 rounded-lg shadow-md mb-6 hidden">
-      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Edit Profile</h3>
-      <form>
-        <div class="mb-4">
-          <label for="edit-avatar" class="block text-gray-700">Avatar URL:</label>
-          <input type="text" id="edit-avatar" class="w-full p-3 border border-gray-300 rounded-md"
-            placeholder="Enter avatar URL">
-        </div>
       </form>
     </div>
-    </div>
+
   </main>
+
   <footer class="bg-cyan-600 text-white text-center py-4 mt-8">
-    <p>&copy; 2025 Social blogify. All Rights Reserved.</p>
+    <p>&copy; 2025 Social Blogify. All Rights Reserved.</p>
   </footer>
+
 </body>
 
 </html>
-
-
