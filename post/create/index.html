@@ -8,7 +8,7 @@
   <script type="module" src="/src/app.js"></script>
 </head>
 
-<body class="bg-gray-100 font-sans  ">
+<body class="bg-gray-100 font-sans min-h-screen grid grid-rows-[auto_1fr_auto]">
 
   <header>
     <div class="navbar bg-cyan-600 p-4 flex justify-between w-full fixed top-0 z-10 items-center">
@@ -40,7 +40,7 @@
 
     </div>
   </header>
-  <main class="p-4 mt-20 md:mt-40 min-h-[90vh] ">
+  <main class="p-8 mt-20 md:mt-40 md:p-12 lg:p-10">
     <h1 class="text-3xl font-bold py-4 text-center mb-6 ">Create Blog Post...</h1>
 
     <div class="max-w-4xl mx-auto  bg-cyan-50 p-6 border border-gray-300 rounded-lg shadow-md">
@@ -50,31 +50,31 @@
         <div class="space-y-2">
           <label for="title" class="block text-lg font-medium text-gray-700">Title:</label>
           <input type="text" id="title" name="title" placeholder="Enter a title here..." required
-            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:outline-none" />
+            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400" />
         </div>
 
         <div class="space-y-2">
           <label for="body" class="block text-lg font-medium text-gray-700">Body:</label>
           <textarea id="body" name="body" placeholder="Editor body goes here..." maxlength="280"
-            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:outline-none"></textarea>
+            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400"></textarea>
         </div>
 
         <div class="space-y-2">
           <label for="tags" class="block text-lg font-medium text-gray-700">Tags:</label>
           <input type="text" id="tags" name="tags"
-            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:outline-none" />
+            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400" />
         </div>
 
         <div class="space-y-2">
           <label for="mediaUrl" class="block text-lg font-medium text-gray-700">Media URL:</label>
           <input type="text" id="mediaUrl" name="mediaUrl" placeholder="Optional"
-            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:outline-none" />
+            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none  focus:ring-2 focus:ring-orange-400 focus:border-orange-400" />
         </div>
 
         <div class="space-y-2">
           <label for="mediaAlt" class="block text-lg font-medium text-gray-700">Media Alt Text:</label>
           <input type="text" id="mediaAlt" name="mediaAlt" placeholder="Optional"
-            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:outline-none" />
+            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none  focus:ring-2 focus:ring-orange-400 focus:border-orange-400" />
         </div>
 
         <button type="submit"
