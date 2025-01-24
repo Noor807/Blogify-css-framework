@@ -5,55 +5,93 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&family=Open+Sans:wght@400;700&display=swap"
-    rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" src="/src/app.js"></script>
   </head>
 
-  <body class="bg-cyan-50 min-h-screen grid grid-rows-[auto_1fr_auto]" >
+  <body class="bg-cyan-50 min-h-screen grid grid-rows-[auto_1fr_auto]">
     <header>
-      <div class="navbar bg-cyan-600 p-4 flex justify-between w-full fixed top-0 z-10 items-center">
+      <div
+        class="navbar bg-cyan-600 p-4 flex justify-between w-full fixed top-0 z-10 items-center"
+      >
         <!-- Logo -->
         <a href="/" class="text-white">
-          <img class="logo h-12 max-w-full sm:h-16 md:h-20 lg:h-26 xl:h-28" src="/images/blogify.png" alt="noroff logo" />
+          <img
+            class="logo h-12 max-w-full sm:h-16 md:h-20 lg:h-26 xl:h-28"
+            src="/images/blogify.png"
+            alt="noroff logo"
+          />
         </a>
         <!-- Hamburger Menu for Small Screens -->
         <div class="lg:hidden flex items-center">
           <button id="hamburger-btn" class="text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
             </svg>
           </button>
         </div>
-       <!-- Navigation Links -->
-        <ul id="navbar-links"
-          class="lg:flex lg:flex-row absolute lg:static w-full place-items-center pb-3 lg:space-x-6 hidden space-y-4 top-[100%] bg-cyan-600 right-0 lg:space-y-0 lg:justify-end lg:ml-auto flex flex-col justify-center">
-          <li><a href="/profile/" class="text-white font-semibold hover:underline">My Profile</a></li>
-          <li><a href="/post/create/" class="text-white font-semibold hover:underline">Create Post</a></li>
+        <!-- Navigation Links -->
+        <ul
+          id="navbar-links"
+          class="lg:flex lg:flex-row absolute lg:static w-full place-items-center pb-3 lg:space-x-6 hidden space-y-4 top-[100%] bg-cyan-600 right-0 lg:space-y-0 lg:justify-end lg:ml-auto flex flex-col justify-center"
+        >
           <li>
-            <button id="logout-Btn" type="button"
-              class="bg-yellow-700 text-white py-1 px-4 font-semibold rounded-md hover:bg-orange-500 transition">
+            <a href="/profile/" class="text-white font-semibold hover:underline"
+              >My Profile</a
+            >
+          </li>
+          <li>
+            <a
+              href="/post/create/"
+              class="text-white font-semibold hover:underline"
+              >Create Post</a
+            >
+          </li>
+          <li>
+            <button
+              id="logout-Btn"
+              type="button"
+              class="bg-yellow-700 text-white py-1 px-4 font-semibold rounded-md hover:bg-orange-500 transition"
+            >
               Logout
             </button>
           </li>
         </ul>
-       
       </div>
     </header>
 
-    <main class= "p-8 mt-20 md:mt-40 md:p-12 lg:p-10">
-      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 text-center mb-6">
+    <main class="p-8 mt-20 md:mt-40 md:p-12 lg:p-10">
+      <h1
+        class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 text-center mb-6"
+      >
         Edit Post
       </h1>
-    
-      <div class="create-blog border border-gray-300  max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+
+      <div
+        class="create-blog border border-gray-300 max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg"
+      >
         <form id="create-blog-form" name="editPost" class="space-y-6">
           <input type="hidden" id="blogId" name="blogId" />
-    
+
           <!-- Title Input -->
           <div>
-            <label for="title" class="block text-sm font-medium text-gray-700">Title:</label>
+            <label for="title" class="block text-sm font-medium text-gray-700"
+              >Title:</label
+            >
             <input
               type="text"
               id="title"
@@ -63,10 +101,12 @@
               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
-    
+
           <!-- Body Textarea -->
           <div>
-            <label for="body" class="block text-sm font-medium text-gray-700">Body:</label>
+            <label for="body" class="block text-sm font-medium text-gray-700"
+              >Body:</label
+            >
             <textarea
               id="body"
               name="body"
@@ -75,10 +115,12 @@
               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
             ></textarea>
           </div>
-    
+
           <!-- Tags Input -->
           <div>
-            <label for="tags" class="block text-sm font-medium text-gray-700">Tags:</label>
+            <label for="tags" class="block text-sm font-medium text-gray-700"
+              >Tags:</label
+            >
             <input
               type="text"
               id="tags"
@@ -86,10 +128,14 @@
               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
-    
+
           <!-- Media URL Input -->
           <div>
-            <label for="mediaUrl" class="block text-sm font-medium text-gray-700">Media URL:</label>
+            <label
+              for="mediaUrl"
+              class="block text-sm font-medium text-gray-700"
+              >Media URL:</label
+            >
             <input
               type="text"
               id="mediaUrl"
@@ -98,10 +144,14 @@
               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
-    
+
           <!-- Media Alt Text Input -->
           <div>
-            <label for="mediaAlt" class="block text-sm font-medium text-gray-700">Media Alt Text:</label>
+            <label
+              for="mediaAlt"
+              class="block text-sm font-medium text-gray-700"
+              >Media Alt Text:</label
+            >
             <input
               type="text"
               id="mediaAlt"
@@ -110,16 +160,16 @@
               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
-    
+
           <!-- Hidden ID Input -->
           <input type="hidden" name="id" />
-    
+
           <!-- Update Button -->
           <div>
             <button
               id="update-btn"
               type="submit"
-              class="w-full bg-orange-500 font-semibold text-black py-2 rounded-md hover:bg-orange-400  focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2"
+              class="w-full bg-orange-500 font-semibold text-black py-2 rounded-md hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2"
             >
               update post
             </button>
@@ -130,6 +180,5 @@
     <footer class="bg-cyan-600 text-white text-center py-4 mt-8">
       <p>&copy; 2025 Social blogify. All Rights Reserved.</p>
     </footer>
-    
   </body>
 </html>
