@@ -61,7 +61,12 @@ export async function RenderSinglePost(postId) {
       "rounded-lg",
       "mt-4",
       "object-cover",
-      "lg:w-[900px]"
+      "h-[200px]",
+      "sm:h-[250px]",
+      "md:h-[300px]",
+      "lg:h-[400px]",
+      "lg:w-[900px]",
+      "mx-auto"
     );
 
     imageElement.onerror = () => {
