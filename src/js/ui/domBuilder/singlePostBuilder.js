@@ -18,7 +18,14 @@ export async function RenderSinglePost(postId) {
     // Title Element
     const titleElement = document.createElement("h2");
     titleElement.textContent = data.data.title;
-    titleElement.classList.add("text-xl", "sm:text-3xl", "lg:text-2xl", "font-semibold", "text-gray-900", "mt-4");
+    titleElement.classList.add(
+      "text-xl",
+      "sm:text-3xl",
+      "lg:text-2xl",
+      "font-semibold",
+      "text-gray-900",
+      "mt-4"
+    );
 
     // Author Element
     const authorElement = document.createElement("p");
@@ -27,19 +34,39 @@ export async function RenderSinglePost(postId) {
 
     // Date Element
     const dateElement = document.createElement("p");
-    dateElement.textContent = `Published: ${data.data.created.slice(0, 10) || "Date unknown"}`;
+    dateElement.textContent = `Published: ${
+      data.data.created.slice(0, 10) || "Date unknown"
+    }`;
     dateElement.classList.add("text-lg", "text-gray-500", "mt-1");
 
     // Content Element
     const contentElement = document.createElement("div");
     contentElement.innerHTML = data.data.body;
-    contentElement.classList.add("text-base", "sm:text-lg", "lg:text-xl", "text-gray-700", "mt-4");
+    contentElement.classList.add(
+      "text-base",
+      "sm:text-lg",
+      "lg:text-xl",
+      "text-gray-700",
+      "mt-4"
+    );
 
-    // Image Element
+    // Image Element with fallback
+    const defaultImage =
+      "https://media.istockphoto.com/id/1296656158/photo/picture-image-symbol-on-blue-background.jpg?s=1024x1024&w=is&k=20&c=_QjSgLcPY2adLmk7FOmAOrrbZVxu0xPdA0stI-cnUKY=";
     const imageElement = document.createElement("img");
-    imageElement.src = data.data.media?.url || "";
+    imageElement.src = data.data.media?.url || defaultImage;
     imageElement.alt = data.data.media?.alt || "Blog image";
-    imageElement.classList.add( "w-full", "rounded-lg", "mt-4", "object-cover", "lg:w-[900px]");
+    imageElement.classList.add(
+      "w-full",
+      "rounded-lg",
+      "mt-4",
+      "object-cover",
+      "lg:w-[900px]"
+    );
+
+    imageElement.onerror = () => {
+      imageElement.src = defaultImage;
+    };
 
     // Append the elements to the post container
     postContainer.appendChild(titleElement);

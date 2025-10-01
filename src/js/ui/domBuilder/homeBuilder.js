@@ -46,7 +46,7 @@ export function renderBlogPosts(array) {
 
     // default image path
     const defaultImage =
-      "https://media.istockphoto.com/id/1296656158/photo/picture-image-symbol-on-blue-background.jpg?s=1024x1024&w=is&k=20&c=_QjSgLcPY2adLmk7FOmAOrrbZVxu0xPdA0stI-cnUKY="; // 👈 put your fallback image here
+      "https://media.istockphoto.com/id/1296656158/photo/picture-image-symbol-on-blue-background.jpg?s=1024x1024&w=is&k=20&c=_QjSgLcPY2adLmk7FOmAOrrbZVxu0xPdA0stI-cnUKY="; 
 
     const img = document.createElement("img");
     img.src = media?.url || defaultImage;
