@@ -40,15 +40,23 @@ export function renderBlogPosts(array) {
     } = post || {};
 
     const postLink = document.createElement("a");
-
     postLink.className =
       "block bg-gray-200 rounded-lg shadow-md hover:shadow-lg hover:scale-90 transition-all duration-500 ease-in-out mb-6 p-4";
     postLink.href = `/post/?post=${id}`;
 
+    // default image path
+    const defaultImage = "https://media.istockphoto.com/id/1296656158/photo/picture-image-symbol-on-blue-background.jpg?s=1024x1024&w=is&k=20&c=_QjSgLcPY2adLmk7FOmAOrrbZVxu0xPdA0stI-cnUKY="; // 👈 put your fallback image here
+
     const img = document.createElement("img");
-    img.src = media?.url || "";
+    img.src = media?.url || defaultImage;
     img.alt = media?.alt || "No description";
     img.className = "w-full h-48 object-cover rounded-t-lg";
+
+    // if image fails to load, replace with default
+    img.onerror = () => {
+      img.src = defaultImage;
+    };
+
     postLink.appendChild(img);
 
     const contentDiv = document.createElement("div");
