@@ -13,6 +13,11 @@
  *   @param {string} [array[].created="Date"] - Creation date in ISO format.
  *   @param {Array<string>} [array[].tags=[]] - Tags associated with the post.*/
 
+function hideLoading() {
+  const loadingIndicator = document.querySelector("#loadingIndicator");
+  if (loadingIndicator) loadingIndicator.remove();
+}
+
 export function renderBlogPosts(array) {
   const blogContainer = document.querySelector("#blogContainer");
 
@@ -20,6 +25,9 @@ export function renderBlogPosts(array) {
     console.error('No element with id "blogContainer" found.');
     return;
   }
+
+  // remove loader before rendering posts
+  hideLoading();
 
   array.forEach((post) => {
     const {
@@ -33,7 +41,8 @@ export function renderBlogPosts(array) {
 
     const postLink = document.createElement("a");
 
-    postLink.className = "block bg-gray-200 rounded-lg shadow-md hover:shadow-lg hover:scale-90 transition-all duration-500 ease-in-out mb-6 p-4";
+    postLink.className =
+      "block bg-gray-200 rounded-lg shadow-md hover:shadow-lg hover:scale-90 transition-all duration-500 ease-in-out mb-6 p-4";
     postLink.href = `/post/?post=${id}`;
 
     const img = document.createElement("img");
@@ -43,10 +52,11 @@ export function renderBlogPosts(array) {
     postLink.appendChild(img);
 
     const contentDiv = document.createElement("div");
-    contentDiv.className = "pt-4"
+    contentDiv.className = "pt-4";
 
     const titleElement = document.createElement("h2");
-    titleElement.className = "text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition duration-200";
+    titleElement.className =
+      "text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition duration-200";
     titleElement.textContent = title;
     contentDiv.appendChild(titleElement);
 

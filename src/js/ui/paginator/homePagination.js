@@ -4,7 +4,7 @@
  *
  * @param {number} [page=1] - The page number to fetch.
  * @param {string} [tag=""] - Optional tag filter for the posts.
-*/
+ */
 
 import { readPosts } from "../../api/post/read";
 import { renderBlogPosts } from "../domBuilder/homeBuilder";
@@ -12,8 +12,23 @@ import { renderBlogPosts } from "../domBuilder/homeBuilder";
 let currentPage = 1;
 const limit = 12;
 
+// show loading spinner
+const showLoading = () => {
+  const blogContainer = document.getElementById("blogContainer");
+  if (blogContainer) {
+    blogContainer.innerHTML = `
+      <div id="loadingIndicator" class="col-span-full flex justify-center py-20">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-blue-500 border-solid"></div>
+      </div>
+    `;
+  }
+};
+
 export const fetchPosts = async (page = 1, tag = "") => {
   try {
+    // show loader while fetching
+    showLoading();
+
     const { data, meta } = await readPosts(limit, page, (tag = ""));
     document.getElementById("blogContainer").innerHTML = "";
 
