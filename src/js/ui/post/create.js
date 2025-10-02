@@ -1,5 +1,5 @@
 import { createBlogPost } from "../../api/post/create.js";
-import { showAlert } from "../../utilities/toast.js";
+import { showToast } from "../../utilities/toast.js";
 
 /**
  * Handles the creation of a new blog post.
@@ -26,7 +26,7 @@ export async function onCreatePost(e) {
 
   // Validate required fields
   if (!title || !body) {
-    showAlert("Title and body are required.", "warning");
+    showToast("Title and body are required.", "warning");
     return;
   }
 
@@ -40,7 +40,7 @@ export async function onCreatePost(e) {
   try {
     const result = await createBlogPost(newPost);
 
-    showAlert("Blog post created successfully!", "success");
+    showToast("Blog post created successfully!", "success");
 
     // Reset form
     document.getElementById("create-blog-form").reset();
@@ -51,6 +51,6 @@ export async function onCreatePost(e) {
     }, 1500);
   } catch (error) {
     console.error("Error creating blog post:", error);
-    showAlert("Failed to create blog post: " + error.message, "error");
+    showToast("Failed to create blog post: " + error.message, "error");
   }
 }

@@ -1,5 +1,5 @@
 import { deletePost } from "../../api/post/delete.js";
-import { showAlert } from "../../utilities/toast.js";
+import { showToast } from "../../utilities/toast.js";
 
 /**
  * Handles deletion of a blog post.
@@ -20,11 +20,11 @@ export async function onDeletePost(event) {
 
   if (!postId) {
     console.error("Post ID not found.");
-    showAlert("Post ID not found.", "error");
+    showToast("Post ID not found.", "error");
     return;
   }
 
-  // Custom confirmation using showAlert with a timeout instead of native confirm()
+  // Custom confirmation using showToast with a timeout instead of native confirm()
   const userConfirmed = confirm("Are you sure you want to delete this post?");
   if (!userConfirmed) return;
 
@@ -35,7 +35,7 @@ export async function onDeletePost(event) {
       const postElement = document.getElementById(`post-${postId}`);
       if (postElement) postElement.remove();
 
-      showAlert(result.message || "Post deleted successfully!", "success");
+      showToast(result.message || "Post deleted successfully!", "success");
 
       // Optional: redirect after a short delay
       setTimeout(() => {
@@ -43,10 +43,10 @@ export async function onDeletePost(event) {
       }, 1500);
     } else {
       console.error("Failed to delete post:", result.error);
-      showAlert("Error: Could not delete the post.", "error");
+      showToast("Error: Could not delete the post.", "error");
     }
   } catch (error) {
     console.error("Unexpected error:", error);
-    showAlert("Error: Could not delete the post.", "error");
+    showToast("Error: Could not delete the post.", "error");
   }
 }

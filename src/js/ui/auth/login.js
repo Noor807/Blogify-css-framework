@@ -1,5 +1,5 @@
 import { login } from "../../api/auth/login";
-import { showAlert } from "../../utilities/toast";
+import { showToast } from "../../utilities/toast";
 
 export async function onLogin(event) {
   event.preventDefault();
@@ -9,7 +9,7 @@ export async function onLogin(event) {
   try {
     const data = await login({ email, password });
 
-    showAlert("Login successful!", "success");
+    showToast("Login successful!", "success");
 
     // Delay redirect to let user see the alert
     setTimeout(() => {
@@ -17,7 +17,7 @@ export async function onLogin(event) {
     }, 1500);
   } catch (error) {
     console.error("Login failed:", error);
-    showAlert(
+    showToast(
       "Login failed. Please check your credentials and try again.",
       "error"
     );

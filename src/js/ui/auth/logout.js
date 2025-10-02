@@ -1,4 +1,4 @@
-import { showAlert } from "../../utilities/alerts";
+import { showToast } from "../../utilities/toast";
 
 export function onLogout() {
   localStorage.removeItem("token");
@@ -6,7 +6,7 @@ export function onLogout() {
   localStorage.removeItem("adminUser");
 
   // Show logout success alert
-  showAlert("You have been logged out.", "info");
+  showToast("You have been logged out.", "info");
 
   // Redirect after short delay so user can see the alert
   setTimeout(() => {
