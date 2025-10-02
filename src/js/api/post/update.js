@@ -1,3 +1,6 @@
+import { API_SOCIAL_POSTS } from "../constants";
+import { headers } from "../headers";
+
 /**
  * Updates an existing post by sending updated data to the API.
  *
@@ -13,8 +16,6 @@
  * @throws {Error} If the API request fails.
  */
 
-import { API_SOCIAL_POSTS } from "../constants";
-import { headers } from "../headers";
 const headersObject = headers();
 
 headersObject.append("Content-Type", "application/json");
