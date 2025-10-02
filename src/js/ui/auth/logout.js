@@ -1,12 +1,15 @@
-/**
- * This function should log the user out by removing appropriate user data from the browser.
- */
+import { showAlert } from "../../utilities/alerts";
 
 export function onLogout() {
-
   localStorage.removeItem("token");
   localStorage.removeItem("apiKey");
   localStorage.removeItem("adminUser");
 
-  window.location.href = "/auth/login/";
+  // Show logout success alert
+  showAlert("You have been logged out.", "info");
+
+  // Redirect after short delay so user can see the alert
+  setTimeout(() => {
+    window.location.href = "/auth/login/";
+  }, 1000);
 }
