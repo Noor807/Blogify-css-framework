@@ -5,6 +5,6 @@
 
 export function authGuard() {
   if (!localStorage.token) {
-    window.location.href = "/auth/login/";
+    window.location.href = "/auth/";
   }
 }
