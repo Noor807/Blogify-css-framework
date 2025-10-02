@@ -1,8 +1,5 @@
-/**
- * This function should pass data to the register function in api/auth and handle the response
- */
-
 import { register } from "../../api/auth/register";
+import { showAlert } from "../../utilities/alerts";
 
 export async function onRegister(event) {
   event.preventDefault();
@@ -11,20 +8,19 @@ export async function onRegister(event) {
   const password = event.target.password.value;
 
   try {
-    const data = await register({
-      name,
-      email,
-      password,
-    });
+    const data = await register({ name, email, password });
 
-    const confirmAction = confirm(
-      "welcome you are registered successfully.do you want to login?"
-    );
-    if (confirmAction) {
+    showAlert("Welcome! You are registered successfully.", "success");
+
+    // Redirect after a short delay so the user sees the alert
+    setTimeout(() => {
       window.location.href = "/auth/login/";
-    }
+    }, 1500);
   } catch (error) {
     console.error("Registration failed:", error);
-    alert("Registration failed. Please check your details and try again.");
+    showAlert(
+      "Registration failed. Please check your details and try again.",
+      "error"
+    );
   }
 }
