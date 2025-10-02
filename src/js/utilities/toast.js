@@ -10,32 +10,34 @@ export function showToast(message, type = "info") {
   let bg;
   switch (type) {
     case "success":
-      bg = "#14b8a6"; // Tailwind teal-500
+      bg = "#22c55e";
       break;
     case "error":
-      bg = "#ef4444"; // Tailwind red-500
+      bg = "#ef4444"; 
       break;
     case "warning":
-      bg = "#f59e0b"; // Tailwind amber-500
+      bg = "#eab308"; 
       break;
     default:
-      bg = "#3b82f6"; // Tailwind blue-500
+      bg = "#16a34a"; 
   }
 
   Toastify({
     text: message,
     duration: 3000,
-    gravity: "top",      // top or bottom
-    position: "right",   // left, center, right
+    gravity: "top",    
+    position: "right", 
     close: true,
     style: {
       background: bg,
-      color: "#fff",      // ensures text is readable
-      fontWeight: "500",  // optional for better readability
-      padding: "0.75rem 1rem"
+      color: "#fff",
+      fontWeight: "500",
+      padding: "0.75rem 1rem",
+      borderRadius: "0.5rem", 
     },
   }).showToast();
 }
+
 
 
 
