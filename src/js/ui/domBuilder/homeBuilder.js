@@ -41,7 +41,7 @@ export function renderBlogPosts(array) {
 
     const postLink = document.createElement("a");
     postLink.className =
-      "block bg-white rounded-lg shadow-md shadow-cyan-300 hover:shadow-lg hover:scale-90 transition-all duration-500 ease-in-out mb-6 p-4";
+      "block bg-white rounded-lg shadow-md shadow-indigo-700 hover:shadow-lg hover:scale-90 transition-all duration-500 ease-in-out mb-6 p-4";
     postLink.href = `/post/?post=${id}`;
 
     // default image path
