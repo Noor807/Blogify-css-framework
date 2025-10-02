@@ -1,7 +1,18 @@
+import { updatePost } from "../../api/post/update.js";
+import { showToast } from "../../utilities/toast.js";
 /**
- * Passes data to the createPost function in api/post and handles the response
+ * Handles updating an existing blog post.
+ * Collects input from the form, validates required fields,
+ * sends the data to the API, and shows toast notifications.
+ *
+ * @param {SubmitEvent} e - The form submit event triggered by the user.
+ * @returns {Promise<void>} - Resolves after attempting to update the blog post.
+ *
+ * @example
+ * const form = document.getElementById("update-blog-form");
+ * form.addEventListener("submit", onUpdatePost);
  */
-import { updatePost } from "../../api/post/update";
+
 export async function onUpdatePost(e) {
   e.preventDefault();
 
@@ -18,21 +29,26 @@ export async function onUpdatePost(e) {
     alt: mediaAlt,
   };
 
+  // Validate required fields
   if (!title || !body) {
-    alert("Title and body are required.");
+    showToast("Title and body are required.", "warning");
     return;
   }
 
   try {
-    document.getElementById("update-btn");
     const response = await updatePost(id, { title, body, tags, media });
+
     if (response) {
-      alert("post is updated successfully");
-      window.location.href = `/post/?post=${id}`;
+      showToast("Post updated successfully!", "success");
+      // Redirect after short delay so user sees toast
+      setTimeout(() => {
+        window.location.href = `/post/?post=${id}`;
+      }, 1500);
     } else {
-      alert("error updating");
+      showToast("Error updating the post.", "error");
     }
   } catch (error) {
-    console.error("update error", error);
+    console.error("Update error:", error);
+    showToast("Unexpected error while updating the post.", "error");
   }
 }

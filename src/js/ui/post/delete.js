@@ -1,6 +1,5 @@
 import { deletePost } from "../../api/post/delete.js";
 import { showToast } from "../../utilities/toast.js";
-import Toastify from "toastify-js";
 
 /**
  * Handles deletion of a blog post.
