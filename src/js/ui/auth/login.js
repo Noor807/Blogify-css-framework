@@ -1,8 +1,5 @@
-/**
- * This function should pass data to the login function in api/auth and handle the response
- */
-
 import { login } from "../../api/auth/login";
+import { showAlert } from "../../utilities/alerts";
 
 export async function onLogin(event) {
   event.preventDefault();
@@ -10,15 +7,19 @@ export async function onLogin(event) {
   const password = event.target.password.value;
 
   try {
-    const data = await login({
-      email,
-      password,
-    });
-    alert("login successfully");
+    const data = await login({ email, password });
 
-    window.location.href = "/";
+    showAlert("Login successful!", "success");
+
+    // Delay redirect to let user see the alert
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 1500);
   } catch (error) {
     console.error("Login failed:", error);
-    alert("Login failed. Please check your credentials and try again.");
+    showAlert(
+      "Login failed. Please check your credentials and try again.",
+      "error"
+    );
   }
 }
