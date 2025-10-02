@@ -1,5 +1,5 @@
 import { register } from "../../api/auth/register";
-import { showAlert } from "../../utilities/alerts";
+import { showToast } from "../../utilities/toast";
 
 export async function onRegister(event) {
   event.preventDefault();
@@ -10,7 +10,7 @@ export async function onRegister(event) {
   try {
     const data = await register({ name, email, password });
 
-    showAlert("Welcome! You are registered successfully.", "success");
+   showToast("Welcome! You are registered successfully.", "success");
 
     // Redirect after a short delay so the user sees the alert
     setTimeout(() => {
