@@ -1,5 +1,5 @@
 import { createBlogPost } from "../../api/post/create.js";
-import { showAlert } from "../../utilities/alerts.js";
+import { showAlert } from "../../utilities/toast.js";
 
 /**
  * Handles the creation of a new blog post.

@@ -1,5 +1,5 @@
 import { login } from "../../api/auth/login";
-import { showAlert } from "../../utilities/alerts";
+import { showAlert } from "../../utilities/toast";
 
 export async function onLogin(event) {
   event.preventDefault();
