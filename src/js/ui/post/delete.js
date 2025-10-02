@@ -1,17 +1,15 @@
 import { deletePost } from "../../api/post/delete.js";
 import { showToast } from "../../utilities/toast.js";
+import Toastify from "toastify-js";
 
 /**
  * Handles deletion of a blog post.
- * Prompts the user for confirmation, calls the delete API,
- * removes the post from the DOM on success, and shows alerts.
+ * Prompts the user for confirmation via a clickable toast,
+ * calls the delete API, removes the post from the DOM on success,
+ * and shows alerts.
  *
  * @param {Event} event - The click event triggered by the delete button.
  * @returns {Promise<void>} - Resolves after attempting to delete the post.
- *
- * @example
- * const deleteBtn = document.querySelector(".delete-post-btn");
- * deleteBtn.addEventListener("click", onDeletePost);
  */
 export async function onDeletePost(event) {
   event.preventDefault();
@@ -24,29 +22,35 @@ export async function onDeletePost(event) {
     return;
   }
 
-  // Custom confirmation using showToast with a timeout instead of native confirm()
-  const userConfirmed = confirm("Are you sure you want to delete this post?");
-  if (!userConfirmed) return;
+  // Toast-based confirmation
+  Toastify({
+    text: "Are you sure you want to delete this post? Click to confirm.",
+    duration: 5000, // auto-close after 5 seconds
+    gravity: "top",
+    position: "right",
+    close: true,
+    style: { background: "#f59e0b", color: "#fff", cursor: "pointer" },
+    onClick: async () => {
+      try {
+        const result = await deletePost(postId);
 
-  try {
-    const result = await deletePost(postId);
+        if (result.success) {
+          const postElement = document.getElementById(`post-${postId}`);
+          if (postElement) postElement.remove();
 
-    if (result.success) {
-      const postElement = document.getElementById(`post-${postId}`);
-      if (postElement) postElement.remove();
+          showToast(result.message || "Post deleted successfully!", "success");
 
-      showToast(result.message || "Post deleted successfully!", "success");
-
-      // Optional: redirect after a short delay
-      setTimeout(() => {
-        window.location.href = "/";
-      }, 1500);
-    } else {
-      console.error("Failed to delete post:", result.error);
-      showToast("Error: Could not delete the post.", "error");
-    }
-  } catch (error) {
-    console.error("Unexpected error:", error);
-    showToast("Error: Could not delete the post.", "error");
-  }
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 1500);
+        } else {
+          console.error("Failed to delete post:", result.error);
+          showToast("Error: Could not delete the post.", "error");
+        }
+      } catch (error) {
+        console.error("Unexpected error:", error);
+        showToast("Error: Could not delete the post.", "error");
+      }
+    },
+  }).showToast();
 }

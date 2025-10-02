@@ -1,3 +1,6 @@
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
+
 /**
  * Show a toast notification using Toastify
  * @param {string} message - The message to display
@@ -7,24 +10,32 @@ export function showToast(message, type = "info") {
   let bg;
   switch (type) {
     case "success":
-      bg = "linear-gradient(to right, #00b09b, #96c93d)";
+      bg = "#14b8a6"; // Tailwind teal-500
       break;
     case "error":
-      bg = "linear-gradient(to right, #e74c3c, #c0392b)";
+      bg = "#ef4444"; // Tailwind red-500
       break;
     case "warning":
-      bg = "linear-gradient(to right, #f39c12, #d35400)";
+      bg = "#f59e0b"; // Tailwind amber-500
       break;
     default:
-      bg = "linear-gradient(to right, #3498db, #2980b9)";
+      bg = "#3b82f6"; // Tailwind blue-500
   }
 
   Toastify({
     text: message,
     duration: 3000,
-    gravity: "top",
-    position: "right",
+    gravity: "top",      // top or bottom
+    position: "right",   // left, center, right
     close: true,
-    style: { background: bg },
+    style: {
+      background: bg,
+      color: "#fff",      // ensures text is readable
+      fontWeight: "500",  // optional for better readability
+      padding: "0.75rem 1rem"
+    },
   }).showToast();
 }
+
+
+
