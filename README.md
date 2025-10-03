@@ -7,10 +7,16 @@
 
 
 
-# Blogify - Social Media Client
+# Blogify - Css Frameworks
 
-This is my **JavaScript 2 Course Assignment** for Noroff.  
-The project is a **client-side social blogging platform** built with **Vite (Vanilla JS, MPA mode)** and styled with **TailwindCSS**.  
+This is my **JavaScript 2 Course Assignment** for Noroff. Where I have to integrated Css Framework  
+The project is a **client-side social blogging platform** 
+
+
+## Buid with:
+- Vite
+- Js Vanilla
+- Tailwind Css
 
 Users can register, log in, and manage their blog posts with full **CRUD functionality** (Create, Read, Update, Delete).
 
